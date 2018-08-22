@@ -1,0 +1,23 @@
+/* Your button CSS code here */
+
+/*THIS IS THE TEPLATE FOR A RED BUTTON. WE CAN COPY IT WITH OTHER COLORS IN THE PALETTE AND THEN DECIDE ON EXACTLY WHICH BUTTONS WE LIKE MOST*/
+
+.btn-red {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background: red;
+  transition: background 0.5s ease;
+
+}
+.btn-red:hover {
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #931621;
+  text-decoration: none;
+  color: red;
+}
+
+
