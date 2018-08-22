@@ -3,7 +3,7 @@
 
 // Define fonts for body and headers
 $body-font: "darkblackd", "Helvetica", "sans-serif";
-$headers-font: "Betty Noir", "Helvetica", "sans-serif";
+$headers-font: "bettynoir", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -15,14 +15,12 @@ $headers-font: "Betty Noir", "Helvetica", "sans-serif";
 // }
 // $my-font: "Font Name";
 @font-face {
-  font-family: 'Betty Noir';
-  src: asset-url('fonts/bettynoir') format('truetype');
-}
-@font-face {
-  font-family: 'darkblackd';
-  src: font-url('DarkBlackD.otf');
+  font-family: 'bettynoir';
+  src: asset-url('bettynoir.ttf') format('truetype');
 }
 
-.dark {
+@font-face {
   font-family: 'darkblackd';
+  src: font-url('darkblackd.otf');
 }
+
