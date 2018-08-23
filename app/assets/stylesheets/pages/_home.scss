@@ -1,3 +1,6 @@
+img{
+  border-radius: 50%;
+}
 
 #myVideo {
   // position: fixed;
@@ -19,6 +22,11 @@
     padding: 10px;
 }
 
+.level_content {
+  padding-top: 16px;
+  justify-content: center;
+}
+
 h1 {
   margin: 20px;
   font-family: "bettynoir";
@@ -33,6 +41,15 @@ p {
   font-family: "medio";
 }
 
+h4 {
+    display: flex;
+  align-content: center;
+  justify-content: center;
+
+  font-family: "medio";
+
+}
+
 #header {
   vertical-align: text-top;
   text-align: center;
@@ -45,14 +62,30 @@ p {
 }
 
 .card {
-  height: 175px;
+  height: 80px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   position: relative;
-  background-color: white;
   margin: 30px;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  background-color: $sepia;
 }
+
+.card-image {
+  width: 120px;
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+
 .card-user {
   position: absolute;
   right: 10px;
