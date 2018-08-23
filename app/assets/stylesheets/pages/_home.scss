@@ -10,7 +10,9 @@ img{
   min-width: 100%;
   min-height: 100%;
 }
-
+.video-content {
+  margin-top: 70px;
+}
 /* Add some content at the bottom of the video/page */
 .content {
     position: absolute;
@@ -56,6 +58,7 @@ h4 {
 }
 
 .home_banner {
+  // margin-top: 70px;
   position: relative;
   height: calc(100vh - 70px);
   overflow: hidden;
