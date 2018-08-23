@@ -1,5 +1,5 @@
 class LevelsController < ApplicationController
   def show
-    @levels = Level.first(2)
+    @level = Level.find_by(number: 2)
   end
 end

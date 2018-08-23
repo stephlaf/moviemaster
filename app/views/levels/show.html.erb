@@ -1,19 +1,14 @@
-<h1>Levels#show</h1>
-<p>Find me in app/views/levels/show.html.erb</p>
-
-<div class="container text-center">
+<div class="container text-center levels-container">
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <% img = "0" + level.number.to_s + ".jpg" %>
+        <% img = "0" + @level.number.to_s + ".jpg" %>
         <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
-        <% image_tag "0" + level.number.to_s + ".jpg" %>
-          <div class="level_content">
-            <h4><%= level.name  %></h4>
+        <% image_tag "0" + @level.number.to_s + ".jpg" %>
+          <div class="">
+            <h4><%= @level.name  %></h4>
           </div>
-        <!-- <img src="<%= @image %>"> -->
       </div>
     </div>
-  </div>
-  
+  </div> 
 </div>
