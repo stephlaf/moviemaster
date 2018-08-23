@@ -1,3 +1,4 @@
+
 <div class="home_banner">
   <video autoplay muted loop id="myVideo">
     <source src="<%= video_path "mov.mp4" %>" type="video/mp4">
@@ -12,4 +13,10 @@
       <button class="btn btn-red">Click Me!</button>
     </header>
   </div>
+</div>
+
+<div class="container">
+  <% @levels.each do |level| %>
+  <%= render partial: "shared/levelcard", locales: {level: level}  %>
+  <% end %>
 </div>
