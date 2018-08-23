@@ -10,14 +10,29 @@
 
 /* Add some content at the bottom of the video/page */
 .content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0);
+    color: #f1f1f1;
+    /* width: 100%; */
+    padding: 10px;
+}
+
+h1 {
+  margin: 20px;
 }
 
 #header {
   font-family: "bettynoir";
+  vertical-align: text-top;
+  text-align: center;
 }
+
+.home_banner {
+  position: relative;
+  height: calc(100vh - 70px);
+}
+
+
+

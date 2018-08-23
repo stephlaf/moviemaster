@@ -9,15 +9,72 @@
   font-weight: bold;
   text-decoration: none;
   background: $prune;
-  transition: background 0.5s ease;
+  transition: background 0.9s ease;
 
 }
 .btn-prune:hover {
   opacity: 1;
   background: transparent;
-  border: 1px solid #931621;
+  border: 1px solid $prune;
   text-decoration: none;
   color: $prune;
 }
 
+.btn-red {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background: $red;
+  transition: background 0.9s ease;
+
+}
+.btn-red:hover {
+  opacity: 0.4;
+  background: $cream;
+  border: 1px solid $red;
+  text-decoration: none;
+  color: $red;
+}
+
+
+
+
+.btn-sand {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background: $sand;
+  transition: background 0.9s ease;
+
+}
+.btn-sand:hover {
+  opacity: 1;
+  background: transparent;
+  border: 1px solid $sand;
+  text-decoration: none;
+  color: $sand;
+}
+
+
+.btn-teal {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background: $teal;
+  transition: background 0.9s ease;
+
+}
+.btn-teal:hover {
+  opacity: 1;
+  background: transparent;
+  border: 1px solid $teal;
+  text-decoration: none;
+  color: $teal;
+}
 
