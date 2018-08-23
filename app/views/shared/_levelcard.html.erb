@@ -2,7 +2,13 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <p><%= level.number  %></p>
+        <% img = "0" + level.number.to_s + ".jpg" %>
+        <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
+        <% image_tag "0" + level.number.to_s + ".jpg" %>
+          <div class="level_content">
+            <h4><%= level.name  %></h4>
+          </div>
+        <!-- <img src="<%= @image %>"> -->
       </div>
     </div>
   </div>
