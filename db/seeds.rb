@@ -32,30 +32,30 @@ end
 
 def seed_lenses
   puts "Creating Five Lenses!"
-  Lens.create(level: Level.first, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph,title: Faker::PrincessBride.quote)
-  Lens.create(level: Level.second, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph,title: Faker::PrincessBride.quote)
-  Lens.create(level: Level.third, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph,title: Faker::PrincessBride.quote)
-  Lens.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph,title: Faker::PrincessBride.quote)
-  Lens.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph,title: Faker::PrincessBride.quote)
+  Lens.create(level: Level.first, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph, image: "https://source.unsplash.com/user/erondu/1600x900" ,title: Faker::PrincessBride.quote)
+  Lens.create(level: Level.second, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph, image: "https://source.unsplash.com/user/erondu/1600x900" ,title: Faker::PrincessBride.quote)
+  Lens.create(level: Level.third, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph, image: "https://source.unsplash.com/user/erondu/1600x900" ,title: Faker::PrincessBride.quote)
+  Lens.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph, image: "https://source.unsplash.com/user/erondu/1600x900" ,title: Faker::PrincessBride.quote)
+  Lens.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=fZ28gGCa_jI", description: Faker::Lorem.paragraph, image: "https://source.unsplash.com/user/erondu/1600x900" ,title: Faker::PrincessBride.quote)
 end
 
 def seed_movies
   puts "Creating Fifteen Movies!"
-  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
-  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", movie_guide: "foo.pdf")
+  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fourth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.fifth, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: Faker::StarWars.quote, IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
 end
 
 def seed_questions
