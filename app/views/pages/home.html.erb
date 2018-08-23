@@ -1,3 +1,4 @@
+
 <div class="home_banner">
   <video autoplay muted loop id="myVideo">
     <source src="<%= video_path "mov.mp4" %>" type="video/mp4">
@@ -7,9 +8,15 @@
     <header id="header">
       <div class="text">
         <h1>Movie Master</h1>
-        <p>Learn to Watch</p>
+        <h3>Learn to Watch</h3>
       </div>
       <button class="btn btn-red">Click Me!</button>
     </header>
   </div>
+</div>
+
+<div class="container">
+  <% @levels.each do |level| %>
+  <%= render partial: "shared/levelcard", locals: {level: level}  %>
+  <% end %>
 </div>
