@@ -8,7 +8,7 @@
     <header id="header">
       <div class="text">
         <h1>Movie Master</h1>
-        <p>Learn to Watch</p>
+        <h3>Learn to Watch</h3>
       </div>
       <button class="btn btn-red">Click Me!</button>
     </header>
@@ -17,6 +17,6 @@
 
 <div class="container">
   <% @levels.each do |level| %>
-  <%= render partial: "shared/levelcard", locales: {level: level}  %>
+  <%= render partial: "shared/levelcard", locals: {level: level}  %>
   <% end %>
 </div>
