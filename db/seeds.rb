@@ -44,7 +44,6 @@ def seed_movies
   Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Taxi Driver", IMDB: "tt0076759", poster: "taxi-driver.jpeg", movie_guide: "foo.pdf")
   Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Fight Club", IMDB: "tt0076759", poster: "fight-club.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "The Shining", IMDB: "tt0076759", poster: "shining-b.jpeg", movie_guide: "foo.pdf")
-  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "The Wizard of Oz", IMDB: "tt0076759", poster: "The-Wizard-of-Oz.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Rocky", IMDB: "tt0076759", poster: "rocky.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "King Kong", IMDB: "tt0076759", poster: "king-kong.jpg", movie_guide: "foo.pdf")
@@ -86,6 +85,69 @@ def seed_responses
 
 end
 
+def seed_wars
+  starwars = Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
+  question1 = Question.create(movie: starwars, content: "Tatooine corresponds to the:")
+  Answer.create(question: question1, content: "call to  adventure")
+  Answer.create(question: question1, content: "ordinary world", correct: true)
+  Answer.create(question: question1, content: "special world")
+  Answer.create(question: question1, content: "refusal of the call")
+
+  question2 = Question.create(movie: starwars, content: "Luke receives his call to adventure:")
+  Answer.create(question: question2, content: "when Ob-Wan Kenobi reveals himself to be a Jedi knight")
+  Answer.create(question: question2, content: "when R2-D2 projects Leia's plea for help", correct: true)
+  Answer.create(question: question2, content: "when he goes off in search the missing R2-D2")
+  Answer.create(question: question2, content: "when Obi-Wan presents him with hi father's light saber")
+
+  question3 = Question.create(movie: starwars, content: "Luke initially refuses the call to action because:")
+  Answer.create(question: question3, content: "he likes his life just as it is")
+  Answer.create(question: question3, content: "he feels like the rebellion has nothing to do with him")
+  Answer.create(question: question3, content: "he is afraid of spaceships")
+  Answer.create(question: question3, content: "he feels an obligation to his aunt and uncle", correct: true)
+
+  question4 = Question.create(movie: starwars, content: "Who is Luke's mentor?")
+  Answer.create(question: question4, content: "Obi-Wan Kenobi", correct: true)
+  Answer.create(question: question4, content: "Han Solo")
+  Answer.create(question: question4, content: "Princess Leia")
+  Answer.create(question: question4, content: "R2-D2")
+
+  question5 = Question.create(movie: starwars, content: "The threshold stage of the hero's journey is represented by:")
+  Answer.create(question: question5, content: "Luke's aunt and uncle's farm")
+  Answer.create(question: question5, content: "The dessert of Tatooine")
+  Answer.create(question: question5, content: "The Milennium Falcon", correct: true)
+  Answer.create(question: question5, content: "The Mos Eisley spaceport")
+
+  question6 = Question.create(movie: starwars, content: "Luke's allies are:")
+  Answer.create(question: question6, content: "The sand people")
+  Answer.create(question: question6, content: "The Jawa traders")
+  Answer.create(question: question6, content: "The storm troopers")
+  Answer.create(question: question6, content: "Obi-Wan, Han Solo and Chewbaca, R2D2 and C3PO", correct: true)
+
+  question7 = Question.create(movie: starwars, content: "The inmost cave is:")
+  Answer.create(question: question7, content: "The Milennium Falcon")
+  Answer.create(question: question7, content: "The Death Star", correct: true)
+  Answer.create(question: question7, content: "Alderaan")
+  Answer.create(question: question7, content: "Mos Eisley")
+
+  question8 = Question.create(movie: starwars, content: "During the Ordeal stage of the hero's journey:")
+  Answer.create(question: question8, content: "a thug in the cantina picks a fight with Luke")
+  Answer.create(question: question8, content: "Luke's aunt and uncle are killed")
+  Answer.create(question: question8, content: "Obi-Wan sacrifices himself to save Luke", correct: true)
+  Answer.create(question: question8, content: "Princess Leia is killed")
+
+  question9 = Question.create(movie: starwars, content: "The hero's reward for saving Princess Leia is:")
+  Answer.create(question: question9, content: "he receives a cake")
+  Answer.create(question: question9, content: "he becomes a pilot in the rebel fleet", correct: true)
+  Answer.create(question: question9, content: "he becomes commander of the Death Star")
+  Answer.create(question: question9, content: "he receives his father's light saber")
+
+  question10 = Question.create(movie: starwars, content: "The resurrection stage of the hero's journey occurs when:")
+  Answer.create(question: question10, content: "Darth Vader reveals that he is Luke's father")
+  Answer.create(question: question10, content: "Luke channels Obi-Wan and the force to destroy the death star", correct: true)
+  Answer.create(question: question10, content: "Luke receives a medal fro Princess Leia")
+  Answer.create(question: question10, content: "Han Solo returns to help Luke fight the Death Star")
+end
+
 seed_levels
 seed_users
 seed_lenses
@@ -93,4 +155,5 @@ seed_movies
 seed_questions
 seed_answers
 seed_responses
+seed_wars
 

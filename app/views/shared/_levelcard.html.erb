@@ -1,7 +1,7 @@
 
   <div class="row">
     <div class="col-12">
-      <div class="card">
+      <div class="card" data-toggle="collapse" data-target="#level-<%= level.id %>">
         <% img = "0" + level.number.to_s + ".jpg" %>
         <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
         <% image_tag "0" + level.number.to_s + ".jpg" %>
@@ -9,6 +9,11 @@
             <h4><%= level.name  %></h4>
           </div>
         <!-- <img src="<%= @image %>"> -->
+        <div id="level-<%= level.id %>" class="collapse level-details">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
       </div>
     </div>
   </div>
