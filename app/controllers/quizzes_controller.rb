@@ -30,9 +30,10 @@ class QuizzesController < ApplicationController
 
   def set_remaining_questions
     @remaining_questions = []
-    @questions.each do |question|
-      unless question.user_response(current_user).nil? || question.user_response(current_user).correct?
-        @remaining_questions << question
+    @remaining_questions.concat @questions
+    if @responses.count > 0
+      @responses.each do |response|
+        @remaining_questions.delete(response.question) if response.correct?
       end
     end
     return @remaining_questions
