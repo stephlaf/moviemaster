@@ -17,8 +17,14 @@
           </div>
 
           <div class="movies-section">
+            
+            <% @level.movies.each do |movie| %>
+              <h3> <%= movie.title %> </h3>
+              <%= image_tag movie.poster, class: "poster" %>
+
+            <% end %>
+
             <div class="movie-section">
-              <%= image_tag "" %>
             </div>
             
           </div>
