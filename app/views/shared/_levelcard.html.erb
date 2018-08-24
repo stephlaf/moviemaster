@@ -25,7 +25,7 @@
           <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
           <% end %>
         </div>
-          <%= link_to 'go to level', levels_show_path(level.id)  %>
+          <%= link_to 'go to level', level_path(level.id)  %>
       </div>
     </div>
   </div>
