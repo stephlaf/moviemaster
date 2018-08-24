@@ -2,13 +2,31 @@
 
 
 <div class="container">
+
+  HERE IS THE DATA FOR ONE QUIZ CARD
+  <hr>
+<p><%= @movie.title  %></p>
+<p><%= @remaining_questions.first.content %></p>
+<li><%= @remaining_questions.first.answers.first.content %></li>
+<li><%= @remaining_questions.first.answers.second.content %></li>
+<li><%= @remaining_questions.first.answers.third.content %></li>
+<li><%= @remaining_questions.first.answers.fourth.content %></li>
+
+<p><p><p><p><p>
+  <hr>
+IGNORE EVERYTHING BELOW THIS
+
   <h2>The @movie.id is <%= @movie.id %> and the @movie.title is  <%= @movie.title  %></h2>
   <h3>The user's @score for this movie is <%= @score %>
   <h4>The @questions for this movie are . . .  </h2>
     <% @questions.each do |question| %>
     <li><%= question.content %>
+      <% if not question.user_response(current_user).nil? %>
       <p>The user's question.user_response(current_user).answer.content was <%= question.user_response(current_user).answer.content %></p>
       <p>This response's question.user_response(current_user).correct? is  <%= question.user_response(current_user).correct? %></p>
+      <% else %>
+      <p>The user hasn't answered this yet.</p>
+      <% end %>
 
 
     </li>
