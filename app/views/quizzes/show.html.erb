@@ -33,8 +33,8 @@ IGNORE EVERYTHING BELOW THIS
   <% end %>
 
   <h4>As the user submits responses, the @questions for this movie should start disappearing until their @score == 100. Here are the current user's @remaining_questions . . .  </h2>
-    <% @remaining_questions.each do |question| %>
-    <li><%= question.content %></li>
+    <% @remaining_questions.each do |remaining| %>
+    <li><%= remaining.content %></li>
   <% end %>
 
 </div>
