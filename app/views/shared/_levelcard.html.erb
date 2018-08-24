@@ -1,5 +1,5 @@
 <div class="card">
-  <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>">
+  <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>"  style="height: 100%;">
     <% img = "0" + level.number.to_s + ".jpg" %>
     <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
 
@@ -19,8 +19,12 @@
         </div>
       </div>
 
-      <div class="col-xs-2">
-        <%= image_tag "fight-club.jpg", class: "card-image" %>
+      <div class="col-xs-6">
+        <div class="level-images">
+          <%= image_tag "The-Wizard-of-Oz.jpg", class: "movie-poster" %>
+          <%= image_tag "fight-club.jpg", class: "movie-poster" %>
+          <%= image_tag "fight-club.jpg", class: "movie-poster" %>
+        </div>
       </div>
     </div>
   </div>

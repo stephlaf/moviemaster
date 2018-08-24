@@ -1,4 +1,4 @@
-img{
+movie-posterimg{
   border-radius: 50%;
 }
 
@@ -139,4 +139,12 @@ h4 {
   opacity: 0.1;
 }
 
-
+.movie-poster {
+  height: 200px;
+}
+.level-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 45px;
+}
