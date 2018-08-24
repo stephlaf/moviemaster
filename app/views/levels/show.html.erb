@@ -8,28 +8,32 @@
           <div class="level-name">
             <h4><%= @level.name  %></h4>
           </div>
-          
-          <div class="lens-description">
-            <h4>Lens description</h4>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            <%= link_to 'Movie Notes' %>
-            <%= link_to 'Watch Lens' %>
-          </div>
-
-          <div class="movies-section">
-            
-            <% @level.movies.each do |movie| %>
-              <h3> <%= movie.title %> </h3>
-              <%= image_tag movie.poster, class: "poster" %>
-
-            <% end %>
-
-            <div class="movie-section">
-            </div>
-            
-          </div>
-
       </div>
     </div>
-  </div> 
+  </div>
+
+  <div class="level-content">
+    
+   <div class="lens-description">
+     <h4>Lens description</h4>
+     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+     <%= link_to 'Movie Notes' %>
+     <%= link_to 'Watch Lens' %>
+   </div>
+
+   <div class="movies-section">
+
+     <div class="movie-section">
+       <% @level.movies.each do |movie| %>
+         <h3> <%= movie.title %> </h3>
+         <p> <%= movie.description %> </p>
+         <%= image_tag movie.poster, class: "poster" %>
+         <%= link_to "Watch", class: "btn btn-lg" %>
+         <%= link_to "Take Quiz", class: "btn btn-lg" %>
+       <% end %>
+     </div> 
+      
+   </div>   
+
+  </div>
 </div>
