@@ -22,7 +22,7 @@
       <div class="col-xs-6">
         <div class="level-images">
           <% level.movies.each do |movie| %>
-          <%= image_tag movie.poster, class: "movie-poster" %>
+          <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
           <% end %>
         </div>
           <%= link_to 'go to level', levels_show_path(level.id)  %>
