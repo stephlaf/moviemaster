@@ -57,7 +57,7 @@
               <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal-<%= movie.id %>">
                 Watch
               </button>
-               <%= link_to "Take the Quiz", "#" ,class: "btn btn-danger btn-sm" %>
+               <%= link_to "Take the Quiz", quiz_path(movie.id) ,class: "btn btn-danger btn-sm" %>
 
               <div class="modal fade" id="myModal-<%= movie.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                       <%= link_to "Take the Quiz", "#" ,class: "btn btn-danger btn-sm" %>
+                       <%= link_to "Take the Quiz", quiz_path(movie.id) ,class: "btn btn-danger btn-sm" %>
                     </div>
                   </div>
                 </div>
