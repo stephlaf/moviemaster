@@ -1,20 +1,27 @@
+<div class="card">
+  <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>">
+    <% img = "0" + level.number.to_s + ".jpg" %>
+    <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
 
-  <div class="row">
-    <div class="col-12">
-      <div class="card" data-toggle="collapse" data-target="#level-<%= level.id %>">
-        <% img = "0" + level.number.to_s + ".jpg" %>
-        <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
-        <% image_tag "0" + level.number.to_s + ".jpg" %>
-          <div class="level_content">
-            <h4><%= level.name  %></h4>
-          </div>
-        <!-- <img src="<%= @image %>"> -->
-        <div id="level-<%= level.id %>" class="collapse level-details">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    <div class="level_content">
+      <h4><%= level.name %></h4>
+    </div>
+  </div>
+  <!-- <img src="<%= @image %>"> -->
+  <div class="collapse" id="collapseExample-<%= level.id %>">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="level-details">
+          <h4>Level Details</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
+      </div>
+
+      <div class="col-xs-2">
+        <%= image_tag "fight-club.jpg", class: "card-image" %>
       </div>
     </div>
   </div>
-
+</div>
