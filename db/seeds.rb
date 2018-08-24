@@ -41,11 +41,11 @@ end
 
 def seed_movies
   puts "Creating Fifteen Movies!"
-  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Taxi Driver", IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Taxi Driver", IMDB: "tt0076759", poster: "taxi-driver.jpeg", movie_guide: "foo.pdf")
   Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Fight Club", IMDB: "tt0076759", poster: "fight-club.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.first, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "The Shining", IMDB: "tt0076759", poster: "shining-b.jpeg", movie_guide: "foo.pdf")
   Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "The Wizard of Oz", IMDB: "tt0076759", poster: "The-Wizard-of-Oz.jpg", movie_guide: "foo.pdf")
-  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Rocky", IMDB: "tt0076759", poster: "https://source.unsplash.com/user/erondu/142x216", movie_guide: "foo.pdf")
+  Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Rocky", IMDB: "tt0076759", poster: "rocky.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "King Kong", IMDB: "tt0076759", poster: "king-kong.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Jaws", IMDB: "tt0076759", poster: "jaws-a.jpg", movie_guide: "foo.pdf")
   Movie.create(level: Level.third, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Into The Wild", IMDB: "tt0076759", poster: "into_the_wild.jpg", movie_guide: "foo.pdf")
