@@ -31,7 +31,7 @@ class QuizzesController < ApplicationController
   def set_remaining_questions
     @remaining_questions = []
     @questions.each do |question|
-      unless question.user_response(current_user).correct?
+      unless question.user_response(current_user).nil? || question.user_response(current_user).correct?
         @remaining_questions << question
       end
     end
@@ -41,8 +41,8 @@ class QuizzesController < ApplicationController
 
   def set_score
     @score = 0
-    @questions.each do |question|
-      @score += 10 if question.user_response(current_user).correct?
+    @responses.each do |response|
+      @score += 10 if response.correct?
     end
     return @score
   end

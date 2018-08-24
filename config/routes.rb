@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'responses/new'
+  get 'responses/create'
+  get 'responses/update'
   get 'levels/show'
   devise_for :users
   root to: 'pages#home'

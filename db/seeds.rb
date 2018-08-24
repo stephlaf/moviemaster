@@ -154,6 +154,7 @@ seed_lenses
 seed_movies
 seed_questions
 seed_answers
-seed_responses
 seed_wars
+seed_responses
+
 
