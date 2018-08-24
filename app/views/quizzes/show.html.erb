@@ -7,11 +7,15 @@
   <hr>
 <p><%= @movie.title  %></p>
 <p><%= @remaining_questions.first.content %></p>
-<li><%= @remaining_questions.first.answers.first.content %></li>
-<li><%= @remaining_questions.first.answers.second.content %></li>
-<li><%= @remaining_questions.first.answers.third.content %></li>
-<li><%= @remaining_questions.first.answers.fourth.content %></li>
 
+<li><%= @remaining_questions.first.answers.first.content %><%= link_to 'Choose', response_path(@remaining_questions.first.answers.first.id), class: 'btn btn-sm btn-sand', method: :create %>
+</li>
+<li><%= @remaining_questions.first.answers.second.content %><%= link_to 'Choose', response_path(@remaining_questions.second.answers.first.id), class: 'btn btn-sm btn-sand', method: :create %>
+</li>
+<li><%= @remaining_questions.first.answers.third.content %><%= link_to 'Choose', response_path(@remaining_questions.third.answers.first.id), class: 'btn btn-sm btn-sand', method: :create %>
+</li>
+<li><%= @remaining_questions.first.answers.fourth.content %><%= link_to 'Choose', response_path(@remaining_questions.fourth.answers.first.id), class: 'btn btn-sm btn-sand', method: :create %>
+</li>
 <p><p><p><p><p>
   <hr>
 IGNORE EVERYTHING BELOW THIS
