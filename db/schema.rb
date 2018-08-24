@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_161256) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.bigint "level_id"
+    t.bigint "level_id", default: 1
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["level_id"], name: "index_users_on_level_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
