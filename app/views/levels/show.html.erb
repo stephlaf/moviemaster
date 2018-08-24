@@ -1,7 +1,7 @@
 <div class="container text-center levels-container">
   <div class="row">
     <div class="col-12">
-      <div class="card">
+      <div class="card level-card">
         <% img = "0" + @level.number.to_s + ".jpg" %>
         <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
         <% image_tag "0" + @level.number.to_s + ".jpg" %>
@@ -12,28 +12,77 @@
     </div>
   </div>
 
-  <div class="level-content">
+  <div class="level-content text-center">
     
    <div class="lens-description">
-     <h4>Lens description</h4>
-     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-     <%= link_to 'Movie Notes' %>
-     <%= link_to 'Watch Lens' %>
+     <h3>Lens description</h3>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#lensModal<%=  %>">
+       Watch Lens
+     </button>
+     <%= link_to 'Movie Notes', "#" ,class: "btn btn-danger btn-sm" %>
+   </div>
+
+   <div class="modal fade" id="lensModal<%=  %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           <h4 class="modal-title" id="myModalLabel"> </h4>
+         </div>
+         <div class="modal-body">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Hhk4N9A0oCA?start=12" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <%= link_to "Take the Quiz", "#" ,class: "btn btn-danger btn-sm" %>
+         </div>
+       </div>
+     </div>
    </div>
 
    <div class="movies-section">
+     <% @level.movies.each do |movie| %>
+       <div class="movie-section">
+         <div class="movie-poster">
+           <div> <%= image_tag movie.poster, class: "poster" %> </div>
+         </div>
+         <div class="movie-info">
+           <h3> <%= movie.title %> </h3>
+           <p> <%= movie.description %> </p>
+           <!-- Button trigger modal -->
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal-<%= movie.id %>">
+                Watch
+              </button>
+               <%= link_to "Take the Quiz", "#" ,class: "btn btn-danger btn-sm" %>
 
-     <div class="movie-section">
-       <% @level.movies.each do |movie| %>
-         <h3> <%= movie.title %> </h3>
-         <p> <%= movie.description %> </p>
-         <%= image_tag movie.poster, class: "poster" %>
-         <%= link_to "Watch", class: "btn btn-lg" %>
-         <%= link_to "Take Quiz", class: "btn btn-lg" %>
-       <% end %>
-     </div> 
-      
+              <div class="modal fade" id="myModal-<%= movie.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel"><%= movie.title %> </h4>
+                    </div>
+                    <div class="modal-body">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/2WBG2rJZGW8?start=346" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                       <%= link_to "Take the Quiz", "#" ,class: "btn btn-danger btn-sm" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+         </div>
+       </div> 
+     <% end %>
    </div>   
-
   </div>
 </div>
+
+<!-- Modal -->
+
