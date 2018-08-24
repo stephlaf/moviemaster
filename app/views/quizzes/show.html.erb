@@ -1,0 +1,22 @@
+<h1>BEHOLD! I AM A MIGHTY QUIZ PAGE!!!</h1>
+
+
+<div class="container">
+  <h2>The @movie.id is <%= @movie.id %> and the @movie.title is  <%= @movie.title  %></h2>
+  <h3>The user's @score for this movie is <%= @score %>
+  <h4>The @questions for this movie are . . .  </h2>
+    <% @questions.each do |question| %>
+    <li><%= question.content %>
+      <p>The user's question.user_response(current_user).answer.content was <%= question.user_response(current_user).answer.content %></p>
+      <p>This response's question.user_response(current_user).correct? is  <%= question.user_response(current_user).correct? %></p>
+
+
+    </li>
+  <% end %>
+
+  <h4>As the user submits responses, the @questions for this movie should start disappearing until their @score == 100. Here are the current user's @remaining_questions . . .  </h2>
+    <% @remaining_questions.each do |question| %>
+    <li><%= question.content %></li>
+  <% end %>
+
+</div>

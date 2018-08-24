@@ -14,17 +14,21 @@ class User < ApplicationRecord
     self.level.number
   end
 
-  def score
-    # user.score will return a hash, where the key is movie.id.to_s and the value is the number of correct responses that the user has given for that movie
-    @scores = {}
-    correct_responses = self.answers.where(correct: true)
-    self.movies.each do |movie|
-      @scores["#{movie.id}"] = 0
-      correct_responses.each do |response|
-        @scores["#{movie.id}"] += 1 if response.movie == movie
-      end
-    end
-    return @scores
-  end
+  # def score
+  #   # user.score will return a hash, where the key is movie.id.to_s and the value is the number of correct responses that the user has given for that movie
+  #   @scores = {}
+  #   correct_responses = self.answers.where(correct: true)
+  #   movies.each do |movie|
+  #     @scores["#{movie.id}"] = 0
+  #   end
+
+  #   self.movies.each do |movie|
+  #     correct_responses.each do |response|
+  #       @scores["#{movie.id}"] += 1 if response.movie == movie
+  #     end
+
+  #   end
+  #   return @scores
+  # end
 
 end
