@@ -13,11 +13,11 @@
 .content {
     position: absolute;
     bottom: 100px;
-    left: 30px;
+    left: 40px;
     background: rgba(0, 0, 0, 0);
     color: #f1f1f1;
-    /* width: 100%; */
     padding: 10px;
+    margin-left: 40px;
 }
 
 .card-image {
@@ -30,7 +30,7 @@
 }
 
 h1 {
-  margin: 20px;
+  margin: 20px 0;
   font-family: "bettynoir";
 }
 
@@ -53,7 +53,7 @@ h4 {
 
 #header {
   vertical-align: text-top;
-  text-align: center;
+  text-align: left;
 }
 
 .home_banner {
@@ -65,6 +65,10 @@ h4 {
 
 .level-details {
   margin: 45px;
+  text-align: left;
+  h4 {
+    display: block;
+  }
 }
 
 
@@ -130,10 +134,11 @@ h4 {
 
 .movie-poster {
   height: 200px;
+  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 }
 .level-images {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 45px;
 }

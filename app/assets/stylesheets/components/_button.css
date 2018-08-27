@@ -3,13 +3,14 @@
 /*THIS IS THE TEPLATE FOR A RED BUTTON. WE CAN COPY IT WITH OTHER COLORS IN THE PALETTE AND THEN DECIDE ON EXACTLY WHICH BUTTONS WE LIKE MOST*/
 
 .btn-red {
+  background: $red;
   color: white;
   padding: 15px 25px;
   border-radius: 3px;
   font-weight: bold;
   text-decoration: none;
-  background: $red;
   transition: background 0.9s ease;
+  /*font-family: 'medio';*/
 
 }
 .btn-red:hover {
