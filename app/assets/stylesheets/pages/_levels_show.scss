@@ -1,21 +1,29 @@
 .levels-container {
   margin-top: 70px;
-
 }
 .level-card {
   margin-top: 33px;
 }
-.level-name {
-  vertical-align: center;
-  h4 {
-    // color: red;
-    font-size: 36px;
-    text-shadow: none;
-    font-weight: 400;
-  }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-col {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+.level-card-width {
+  width: 87.75%;
+}
+.level-border {
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 }
 .level-content {
   width: 90%;
+  margin-top: -16px;
   display: inline-flex;
   justify-content: space-between ;
   background: rgba(200, 200, 200, 0.2);
@@ -29,9 +37,12 @@
   width: 65%;
   padding: 0 25px;
   margin-right: 10px;
+  margin-bottom: 5px;
   border-radius: 5px;
-  background: rgba(218, 192, 155, 0.9);
+  background: $white;
+  // background: rgba(218, 192, 155, 0.9);
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
+  text-align: left;
 }
 .movies-section {
   display: flex;
@@ -41,20 +52,21 @@
 .movie-section {
   display: flex;
   border-radius: 5px;
-  background: rgba(218, 192, 155, 0.9);
+  background: $white;
+  // background: rgba(218, 192, 155, 0.9);
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
   margin-bottom: 5px;
 }
 .movie-poster {
+  // box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 
 }
 .poster {
-  height: 200px;
-  border-radius: 0;
-  margin: 25px;
+  height: 165px;
+  margin: 15px 25px 25px 25px;
+  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 }
 .movie-info {
-  // width: 50%;
 }
 .video-size {
   width: 70vw;

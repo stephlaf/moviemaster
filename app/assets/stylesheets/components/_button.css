@@ -2,6 +2,30 @@
 
 /*THIS IS THE TEPLATE FOR A RED BUTTON. WE CAN COPY IT WITH OTHER COLORS IN THE PALETTE AND THEN DECIDE ON EXACTLY WHICH BUTTONS WE LIKE MOST*/
 
+.btn-red {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-decoration: none;
+  background: $red;
+  transition: background 0.9s ease;
+
+}
+.btn-red:hover {
+  /*opacity: 0.4;*/
+  background: transparent;
+  /*background: $light-sand;*/
+  border: 1px solid $red;
+  text-decoration: none;
+  color: $white;
+  /*color: $red;*/
+}
+
+.btn-danger-reverse {
+  background-color: transparent;
+  color: $red;
+}
 .btn-prune {
   color: white;
   padding: 15px 25px;
@@ -20,23 +44,6 @@
   color: $prune;
 }
 
-.btn-red {
-  color: white;
-  padding: 15px 25px;
-  border-radius: 12px;
-  font-weight: bold;
-  text-decoration: none;
-  background: $red;
-  transition: background 0.9s ease;
-
-}
-.btn-red:hover {
-  opacity: 0.4;
-  background: $cream;
-  border: 1px solid $red;
-  text-decoration: none;
-  color: $red;
-}
 
 
 
