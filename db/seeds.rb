@@ -58,7 +58,7 @@ def seed_movies
 end
 
 def seed_questions
-  puts "Creating Quiz For Each Movie"
+  puts "Creating Quiz For Each Movie (Except Star Wars)"
   Movie.all.each do |movie|
     puts "Adding questions for movie '#{movie.title}'"
     10.times do
@@ -77,15 +77,8 @@ def seed_answers
   end
 end
 
-def seed_responses
-  puts "Seeding Quiz Responses For One User (Steven Spielberg)"
-  Question.all.each do |question|
-    Response.create(user: User.first, answer: question.answers.sample)
-  end
-
-end
-
 def seed_wars
+  puts "Creating Quiz and Answers for Star Wars"
   starwars = Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
   question1 = Question.create(movie: starwars, content: "Tatooine corresponds to the:")
   Answer.create(question: question1, content: "call to  adventure")
@@ -146,6 +139,22 @@ def seed_wars
   Answer.create(question: question10, content: "Luke channels Obi-Wan and the force to destroy the death star", correct: true)
   Answer.create(question: question10, content: "Luke receives a medal fro Princess Leia")
   Answer.create(question: question10, content: "Han Solo returns to help Luke fight the Death Star")
+end
+
+def seed_responses
+  puts "Seeding Correct Quiz Responses For Steven Spielberg for entire first level"
+  Movie.first(5).each do |movie|
+    puts "Seeding Correct Quiz Responses For first two movies of level 2" if movie == Movie.fourth
+    puts "Seeding #{movie.title} responses"
+    movie.questions.all.each do |question|
+      Response.create(user: User.first, answer: question.answers.fourth)
+    end
+  end
+  puts "Seeding Correct Quiz Resposes for First Seven Star Wars Questions"
+  Movie.last.questions.first(7).each do |question|
+    Response.create(user: User.first, answer: question.answers.where(correct: true)[0])
+  end
+
 end
 
 seed_levels
