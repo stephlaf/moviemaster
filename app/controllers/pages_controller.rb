@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @levels = Level.first(3)
     @lenses = Lens.first(3)
   end
+
+  def end
+  end
 end
