@@ -2,11 +2,9 @@
 
   <div>
     <h2><%= question.content %></h2>
-
-    <li><a><%= link_to question.answers.first.content, answer_path(question.answers.first.id) %></a></li>
-    <li><a><%= link_to question.answers.second.content, answer_path(question.answers.second.id) %></a></li>
-    <li><a><%= link_to question.answers.third.content, answer_path(question.answers.third.id) %></a></li>
-    <li><a><%= link_to question.answers.fourth.content, answer_path(question.answers.fourth.id) %></a></li>
+    <% question.answers.each do |answer| %></h2>
+      <li id="<%= answer.id %>"><%= link_to answer.content, answer_path(answer), remote: true %></li>
+    <% end %>
   </div>
 </div>
 
