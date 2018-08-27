@@ -1,0 +1,8 @@
+const quizcard = document.querySelector("#quizcard");
+const scorestuff = document.querySelector("#score");
+
+
+quizcard.innerHTML = "<%= j render partial: 'shared/answercard', locals: {answer: @answer}  %>";
+<% if @answer.correct? %>
+scorestuff.innerText = "Your score is <%= @score %> out of 100 . . . [TODO: Make this a sweet status bar]"
+<% end %>
