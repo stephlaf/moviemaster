@@ -1,3 +1,24 @@
+.btn-danger {
+  background: $red;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.9s ease;
+  &:hover {
+    background-color: $light-red;
+    color: white;
+  };
+}
+
+.btn-danger-reverse {
+  background-color: transparent;
+  color: $red;
+  transition: background 0.3s ease;
+  &:hover {
+    background-color: $light-sand;
+    color: $red;
+  };
+}
 /* Your button CSS code here */
 
 /*THIS IS THE TEPLATE FOR A RED BUTTON. WE CAN COPY IT WITH OTHER COLORS IN THE PALETTE AND THEN DECIDE ON EXACTLY WHICH BUTTONS WE LIKE MOST*/
@@ -6,27 +27,18 @@
   background: $red;
   color: white;
   padding: 15px 25px;
-  border-radius: 3px;
+  border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
   transition: background 0.9s ease;
-  /*font-family: 'medio';*/
-
 }
 .btn-red:hover {
-  /*opacity: 0.4;*/
   background: transparent;
-  /*background: $light-sand;*/
   border: 1px solid $red;
   text-decoration: none;
   color: $white;
-  /*color: $red;*/
 }
 
-.btn-danger-reverse {
-  background-color: transparent;
-  color: $red;
-}
 .btn-prune {
   color: white;
   padding: 15px 25px;

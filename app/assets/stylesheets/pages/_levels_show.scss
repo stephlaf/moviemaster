@@ -40,7 +40,6 @@
   margin-bottom: 5px;
   border-radius: 5px;
   background: $white;
-  // background: rgba(218, 192, 155, 0.9);
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
   text-align: left;
 }
@@ -59,11 +58,17 @@
 }
 .level-poster {
   height: 200px;
+  width: 156px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid blue;
 }
 
 .poster {
-  height: 165px;
-  margin: 15px 25px 25px 25px;
+  height: 90%;
+  width: auto;
+  margin: 25px;
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 }
 .movie-info {
@@ -71,4 +76,7 @@
 .video-size {
   width: 70vw;
   height: auto;
+}
+.btn-center {
+  text-align: center;
 }

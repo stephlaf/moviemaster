@@ -23,10 +23,12 @@
     <p>With these two functions of The Hero's Journey in mind, it's easy to see how one of the core themes of any Hero's Journey story is transformation. Rarely do such stories feature a flat character arc, in which the protagonist fights to stay true to their beliefs rather than undergoing change as a result of new experiences.</p>
      <br>
 
+    <div class="btn-center">
      <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#lensModal<%=  %>">
        Watch Lens
      </button>
      <%= link_to 'Movie Notes', "#" ,class: "btn btn-danger btn-danger-reverse btn-sm" %>
+    </div>
    </div>
 
    <div class="modal fade" id="lensModal<%=  %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -51,7 +53,8 @@
      <% @level.movies.each do |movie| %>
        <div class="movie-section">
          <div class="level-poster">
-           <div> <%= image_tag movie.poster, class: "poster" %> </div>
+           <!-- <div>  </div> -->
+           <%= image_tag movie.poster, class: "poster" %>
          </div>
          <div class="movie-info">
            <h3> <%= movie.title %> </h3>
