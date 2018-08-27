@@ -1,0 +1,12 @@
+<div class="answer-card" style="background-image: url(<%= image_path('quiz-card.jpg')%>);">
+
+  <div>
+    <h2><%= question.content %></h2>
+
+    <li><a><%= link_to question.answers.first.content, answer_path(question.answers.first.id) %></a></li>
+    <li><a><%= link_to question.answers.second.content, answer_path(question.answers.second.id) %></a></li>
+    <li><a><%= link_to question.answers.third.content, answer_path(question.answers.third.id) %></a></li>
+    <li><a><%= link_to question.answers.fourth.content, answer_path(question.answers.fourth.id) %></a></li>
+  </div>
+</div>
+

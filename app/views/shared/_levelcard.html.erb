@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card level-border">
   <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>"  style="height: 100%;">
     <% img = "0" + level.number.to_s + ".jpg" %>
     <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
@@ -25,7 +25,6 @@
           <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
           <% end %>
         </div>
-          <%= link_to 'go to level', levels_show_path(level.id)  %>
       </div>
     </div>
   </div>
