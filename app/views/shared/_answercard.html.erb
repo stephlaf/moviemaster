@@ -1,14 +1,21 @@
-<div class="container" style="width: 1024px; height: 768px; background-image: url(<%= image_path('quiz-card.jpg')%>); padding: 200px 100px; color: white;">
+<% correct_response = ["The Force will be with you. Always.", "Nice shot kid, don't get cocky", "Now the student has become the master", "I never doubted you for a second"]%>
+<% incorrect_response = ["- These aren't the droids you're looking for", "- We're doomed", "- I've got a bad feeling about this", "- Weesa gonna die!", "- I suggest a new strategy, R2: let the Wookiee win.", "- I felt a great disturbance in the Force, as if millions of voices suddenly cried out in terror and were suddenly silenced. I fear something terrible has happened.", "- If there's a bright center to the universe, you're on the planet that it's farthest from"]%>
 
-<div>
-<h1 style="margin: 0;"><%= @movie.title  %></h1>
-<h3><%= @question.content %></h3>
+<div class="answer-card" style="background-image: url(<%= image_path('quiz-card.jpg')%>)">
 
-<li><%= @answer.content %></li>
-<li><%= @answer.correct? %></li>
-<p>
-<p style="color:white;">[TODO: Make this all a partial]</p>
-<a class="btn btn-sand" href='/levels/<%= @movie.level.id %>'>Select!</a>
+<div class="answer-form">
+
+<h2><%= @question.content %></h2>
+
+<p><li><%= @answer.content %></li><p>
+  <% if @answer.correct? %>
+<p><%= correct_response.sample %>
+<% else %>
+<%= incorrect_response.sample %>
+<% end %></p>
+
+<br>
+<a class="btn btn-sand" href='/levels/<%= @movie.level.id %>'>Go Back</a>
 
 </div>
 </div>
