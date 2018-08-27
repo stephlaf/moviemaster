@@ -1,0 +1,16 @@
+<div class="container" style="width: 1024px; height: 768px; background-image: url(<%= image_path('quiz-card.jpg')%>); padding: 200px 100px; color: white;">
+
+<div>
+<h1 style="margin: 0;"><%= question.movie.title  %></h1>
+<h3><%= question.content %></h3>
+
+<li><%= link_to question.answers.first.content, answer_path(question.answers.first.id) %></li>
+<li><%= link_to question.answers.second.content, answer_path(question.answers.second.id) %></li>
+<li><%= link_to question.answers.third.content, answer_path(question.answers.third.id) %></li>
+<li><%= link_to question.answers.fourth.content, answer_path(question.answers.fourth.id) %></li>
+<p>
+<p style="color:white;">[TODO: Make this all pretty with CSS]</p>
+
+</div>
+</div>
+

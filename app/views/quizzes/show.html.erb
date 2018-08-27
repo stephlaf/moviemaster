@@ -2,19 +2,4 @@
 <h2>Your score is <%= @score %> out of 100 . . . [TODO: Make this a sweet status bar]</h2>
 
 
-<div class="container" style="width: 1024px; height: 768px; background-image: url(<%= image_path('quiz-card.jpg')%>); padding: 200px 100px; color: white;">
-
-<div>
-<h1 style="margin: 0;"><%= @movie.title  %></h1>
-<h3><%= @remaining_questions.first.content %></h3>
-
-<li><%= @remaining_questions.first.answers.first.content %></li>
-<li><%= @remaining_questions.first.answers.second.content %></li>
-<li><%= @remaining_questions.first.answers.third.content %></li>
-<li><%= @remaining_questions.first.answers.fourth.content %></li>
-<p>
-<p style="color:white;">[TODO: Make this all a partial]</p>
-<a class="btn btn-sand" href='/levels/<%= @movie.level.id %>'>Select!</a>
-
-</div>
-</div>
+<%= render partial: "shared/questioncard", locals: {question: @remaining_questions.first}  %>
