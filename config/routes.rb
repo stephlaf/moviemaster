@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :quizzes, only: [:show]
   resources :answers, only: [:show]
   resources :levels
+  get 'end', to: 'pages#end'
 end
