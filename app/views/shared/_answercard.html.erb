@@ -9,13 +9,21 @@
 
 <p><li><%= @answer.content %></li><p>
   <% if @answer.correct? %>
-<p><%= correct_response.sample %>
+<p><%= correct_response.sample %></p>
+  <p align="center">
+    <% if @score < 100 %>
+      <a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>Got It! Next Scene . . .</a>
+    <% else %>
+      <a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>You Won! Next Level . . . </a>
+    <% end %></p>
 <% else %>
 <%= incorrect_response.sample %>
+<hr>
+<a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>Let's Do A Retake</a>
+
 <% end %></p>
 
 <br>
-<a class="btn btn-sand" href='/levels/<%= @movie.level.id %>'>Go Back</a>
 
 </div>
 </div>
