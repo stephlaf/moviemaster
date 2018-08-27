@@ -3,7 +3,7 @@
   color: white;
   border-radius: 3px;
   text-decoration: none;
-  transition: background 0.9s ease;
+  transition: background 0.3s ease;
   &:hover {
     background-color: $light-red;
     color: white;

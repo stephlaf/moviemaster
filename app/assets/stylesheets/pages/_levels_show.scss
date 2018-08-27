@@ -52,7 +52,6 @@
   display: flex;
   border-radius: 5px;
   background: $white;
-  // background: rgba(218, 192, 155, 0.9);
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
   margin-bottom: 5px;
 }
@@ -72,6 +71,8 @@
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
 }
 .movie-info {
+  width: 67%;
+  // border: 1px solid red;
 }
 .video-size {
   width: 70vw;
