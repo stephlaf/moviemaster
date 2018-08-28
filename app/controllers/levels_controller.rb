@@ -1,6 +1,6 @@
 class LevelsController < ApplicationController
   def show
-    @level = Level.find_by(number: 2)
+    @level = Level.find(params[:id])
   end
 
   def download_pdf
@@ -11,6 +11,5 @@ class LevelsController < ApplicationController
     # )
     pdf_filename = File.join(Rails.root, "public/sw_movie_notes.pdf")
     send_file(pdf_filename, :filename => "sw_movie_notes.pdf", :disposition => 'inline', :type => "application/pdf")
-
   end
 end
