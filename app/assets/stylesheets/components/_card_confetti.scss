@@ -1,0 +1,30 @@
+.container-overlow-hide {
+  overflow: hidden;
+  // max-height: 100vh;
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+@for $i from 0 to 30 {
+  $l: random(90);
+  .confetti-#{$i} {
+    height: auto;
+    width: 100px;
+    top: -20%;
+    left: unquote($l + "%");
+    transform: rotate(0);
+    animation: rain-#{$i} 40s unquote(random(2)+"s") infinite;
+    z-index: 10;
+
+  }
+
+  @keyframes rain-#{$i} {
+    100% {
+      top: 500%;
+      left: unquote($l + random(15) + "%");
+      transform: rotate(#{random()*360}deg);
+    }
+  }
+}

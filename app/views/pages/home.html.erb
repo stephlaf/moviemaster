@@ -17,17 +17,21 @@
 
 </div>
 
+<div class="container container-overlow-hide" id="begin">
+    <div class="card-confetti-wrapper">
+      <% for i in 0...30  %>
+        <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+      <% end %>
+    </div>
+    <div class="row" >
+      <% @levels.each do |level| %>
 
-<div class="container" id="begin">
-  <div class="row" >
-    <% @levels.each do |level| %>
+        <div class="col-xs-12">
+          <%= render partial: "shared/levelcard", locals: {level: level}  %>
+        </div>
 
-      <div class="col-xs-12">
-        <%= render partial: "shared/levelcard", locals: {level: level}  %>
-      </div>
-
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 </div>
 
 <!-- <div class="container">
