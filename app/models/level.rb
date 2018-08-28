@@ -5,4 +5,8 @@ class Level < ApplicationRecord
   def name
     self.lens.title
   end
+
+  def description
+    self.lens.description
+  end
 end
