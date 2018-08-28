@@ -59,10 +59,19 @@
   font-size: 16px;
   text-decoration: none;
   font-family: 'medio';
-}
-.navbar-wagon-link:hover {
-  color: #8c271e;
+  &:hover {
+  color: #171717;
   text-decoration: none;
+  }
+  &:visited {
+  color: #171717;
+  text-decoration: none;
+  }
+  &:focus {
+  color: #171717;
+  text-decoration: none;
+  outline: none;
+  }
 }
 
 /* Dropdown menu */

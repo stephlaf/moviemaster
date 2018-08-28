@@ -13,7 +13,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Now Playing: #{current_user.first_name} #{current_user.last_name}", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Now Playing: #{current_user.first_name} #{current_user.last_name}", end_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
