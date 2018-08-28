@@ -9,7 +9,7 @@
   </div>
   <!-- <img src="<%= @image %>"> -->
 
-  <% if level.number == current_user.level.number %>
+  <% if !current_user.nil? && level.number == current_user.level.number %>
     <div class="collapse in" id="collapseExample-<%= level.id %>">
   <% else %>
     <div class="collapse" id="collapseExample-<%= level.id %>">
