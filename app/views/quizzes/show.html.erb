@@ -1,7 +1,13 @@
-<h1>Now playing <%= @movie.title  %></h1>
-<h2 id="score">Your score is <%= @score %> out of 100 . . . [TODO: Make this a sweet status bar]</h2>
+<div class = "container">
+  <h1>Now playing <%= @movie.title  %></h1>
+  <h2 id="score">Your score is <%= @score %> out of 100 . . . [TODO: Make this a sweet status bar]</h2>
 
-<div id="quizcard">
-<%= render partial: "shared/questioncard", locals: {question: @remaining_questions.first}  %>
+  <div id="quizcard">
+    <% if @score < 100 %>
+      <%= render partial: "shared/questioncard", locals: {question: @remaining_questions.first}  %>
+    <% else %>
+    <%= render partial: "shared/victorycard", locals: {movie: @movie } %>
+    <% end %>
+  </div>
 </div>
 
