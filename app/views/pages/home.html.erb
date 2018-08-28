@@ -22,7 +22,19 @@
   <% @victory = true if !current_user.nil? && current_user.level_up? %>
     <div class="card-confetti-wrapper">
       <% if @victory == true %>
-        <% for i in 0...30  %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
           <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
         <% end %>
       <% end %>
