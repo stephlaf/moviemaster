@@ -17,17 +17,37 @@
 
 </div>
 
+<div class="container container-overlow-hide" id="begin">
+  <% @victory = false %>
+  <% @victory = true if !current_user.nil? && current_user.level_up? %>
+    <div class="card-confetti-wrapper">
+      <% if @victory == true %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+        <% for i in 0...90  %>
+          <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="row" >
+      <% @levels.each do |level| %>
 
-<div class="container" id="begin">
-  <div class="row" >
-    <% @levels.each do |level| %>
+        <div class="col-xs-12">
+          <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
+        </div>
 
-      <div class="col-xs-12">
-        <%= render partial: "shared/levelcard", locals: {level: level}  %>
-      </div>
-
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 </div>
 
 <!-- <div class="container">

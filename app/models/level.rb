@@ -14,6 +14,23 @@ class Level < ApplicationRecord
     return @response
   end
 
+
+  def score(user)
+    @score = 0
+    self.movies.each do |movie|
+      @score += movie.score(user)
+    end
+    return @score
+  end
+
+  def now_playing?(user)
+    self.number == user.level.number
+  end
+
+  def unlocked?(user)
+    self.number <= user.level.number
+  end
+
   def description
     self.lens.description
   end

@@ -25,9 +25,9 @@ end
 
 def seed_users
   puts "Creating Three Users!"
-  User.create(email: "steven@spielberg.com", first_name: "Steven", last_name: "Spielberg", password: "123456", level: Level.first)
-  User.create(email: "george@lucas.com", first_name: "George", last_name: "Lucas", password: "123456", level: Level.second)
-  User.create(email: "ryan@coogler.com", first_name: "Ryan", last_name: "Coogler", password: "123456", level: Level.third)
+  User.create(email: "steven@spielberg.com", first_name: "Steven", last_name: "Spielberg", password: "123456", level: Level.second)
+  User.create(email: "george@lucas.com", first_name: "George", last_name: "Lucas", password: "123456", level: Level.first)
+  User.create(email: "ryan@coogler.com", first_name: "Ryan", last_name: "Coogler", password: "123456", level: Level.first)
 end
 
 def seed_lenses

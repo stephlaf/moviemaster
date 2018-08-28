@@ -14,6 +14,18 @@ class User < ApplicationRecord
     self.level.number
   end
 
+  def level_up!
+    new_rank = self.level.number + 1
+    new_level = Level.find_by(number: new_rank)
+    self.level = new_level
+    self.save
+  end
+
+  def level_up?
+    current_level = Level.find_by(number: self.level.number)
+    level_up! if current_level.completed?(self)
+  end
+
   # def score
   #   # user.score will return a hash, where the key is movie.id.to_s and the value is the number of correct responses that the user has given for that movie
   #   @scores = {}

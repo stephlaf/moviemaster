@@ -9,17 +9,45 @@
     <i class="fas fa-lock fa-lock-pos"></i>
   </div>
   <!-- <img src="<%= @image %>"> -->
-  <div class="collapse" id="collapseExample-<%= level.id %>">
+
+  <% if level.number == current_user.level.number %>
+    <div class="collapse in" id="collapseExample-<%= level.id %>">
+  <% else %>
+    <div class="collapse" id="collapseExample-<%= level.id %>">
+  <% end %>
     <div class="row">
       <div class="col-xs-6">
-        <div class="level-details">
+        <div class="level-details card-confetti-wrapper">
+          <% if (@victory == true) && level == current_user.level %>
+            <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+                <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+                <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+          <% end %>
+
           <h4>Level Details</h4>
           <p> <%= Lens.find_by(id: level.id).description.split("<p>")[0] %></p>
         </div>
       </div>
 
       <div class="col-xs-6">
-        <div class="level-images">
+        <div class="level-images card-confetti-wrapper">
+          <% if (@victory == true) && level == current_user.level %>
+            <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+                <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+                <% for i in 0...90  %>
+              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+            <% end %>
+          <% end %>
           <% level.movies.each do |movie| %>
           <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
           <% end %>
