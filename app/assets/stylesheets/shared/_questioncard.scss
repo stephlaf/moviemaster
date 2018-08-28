@@ -17,16 +17,21 @@ a:hover {
 
 .answer-card {
   width: 100%;
-  // height: 100vh;
+  height: 100%;
   // height: 768px;
-  padding: 200px 100px;
+  // padding: 200px 100px;
   color: white;
   background-position: center;
+  // background-size: contain;
   background-size: cover;
+  // background-repeat: no-repeat;
 }
 
-.answer-form p {
+.answer-form {
+  // margin-top: 50px;
+  p {
   font-family: medio;
   font-size: 24px;
   color: $white;
+  }
 }
