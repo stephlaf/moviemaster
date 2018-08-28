@@ -42,7 +42,7 @@
     <div class="row" >
       <% @levels.each do |level| %>
 
-        <div class="col-xs-12">
+        <div class="col-xs-12" id="level<%= level.number %>">
           <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
         </div>
 
