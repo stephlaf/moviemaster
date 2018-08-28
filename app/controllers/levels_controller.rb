@@ -1,6 +1,6 @@
 class LevelsController < ApplicationController
   def show
-    @level = Level.find_by(number: 2)
-    # @movie = 
+    @level = Level.find(params[:id])
+    # @movie =
   end
 end

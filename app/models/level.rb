@@ -14,4 +14,7 @@ class Level < ApplicationRecord
     return @response
   end
 
+  def description
+    self.lens.description
+  end
 end

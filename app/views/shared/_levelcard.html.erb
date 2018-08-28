@@ -13,7 +13,7 @@
       <div class="col-xs-6">
         <div class="level-details">
           <h4>Level Details</h4>
-          <p> <%= Lens.find_by(id: level.id).description %></p>
+          <p> <%= Lens.find_by(id: level.id).description.split("<p>")[0] %></p>
         </div>
       </div>
 
