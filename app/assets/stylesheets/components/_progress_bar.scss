@@ -1,0 +1,38 @@
+#barra {
+  width: 100%;
+  height: 35px;
+  background-color: $black !important;
+  position: relative;
+}
+
+#bar {
+  height: 35px;
+  background-color: $red;
+}
+
+
+
+.progress-bar {
+  position: relative;
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: $red;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+
+.star {
+  position: absolute;
+  height: 70px;
+  width: 75px;
+  right: -35px;
+  top: -22px;
+}
