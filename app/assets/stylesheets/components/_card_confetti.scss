@@ -15,7 +15,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 40s unquote(random(2)+"s") infinite;
+    animation: rain-#{$i} 50s unquote(random(2)+"s") infinite;
     z-index: 10;
 
   }
