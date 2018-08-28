@@ -1,12 +1,11 @@
 
-  <div class="end-banner">
-    <video autoplay muted loop id="myVideo">
-      <source src="<%= video_path "endcard.mp4" %>" type="video/mp4">
-    </video>
-    <div class="end-content">
-      <h1>The End</h1>
-    </div>
+<div class="end-banner">
+  <video autoplay muted loop id="myVideo">
+    <source src="<%= video_path "endcard.mp4" %>" type="video/mp4">
+  </video>
+  <div class="end-content">
+    <h1> <%= link_to "The End", root_path, class: "end-content-h1" %> </h1>
   </div>
-
+</div>
 
 <script>document.getElementById("myVideo").playbackRate = 0.35;</script>
