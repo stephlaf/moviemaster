@@ -5,8 +5,14 @@
 <h2>Hooray!</h2>
 
 <p>You have completed this movie!</p>
-<a class="btn btn-sand" href='/levels/<%= movie.level.id %>'>Let's Watch The Next Movie!</a>
 
+      <% if @movie.level.completed?(current_user) == false %>
+<a class="btn btn-sand" href='/levels/<%= movie.level.id %>'>Let's Watch The Next Movie!</a>
+      <% end %>
+      <% if @movie.level.completed?(current_user) == true %>
+        <p>And You've Completed This Level!</p>
+        <a class="btn btn-sand" href='/'>Let's Master The Next Level . . . </a>
+      <% end %>
 
 </div>
 </div>

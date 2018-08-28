@@ -14,7 +14,13 @@
     <% if @score < 100 %>
       <a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>Got It! Next Scene . . .</a>
     <% else %>
-      <a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>You Won! Next Level . . . </a>
+      <% if @answer.movie.level.completed?(current_user) == false %>
+        <a class="btn btn-sand" href='/quizzes/<%= @movie.id %>'>You Won! Let's Watch Another Movie . . . </a>
+      <% end %>
+      <% if @answer.movie.level.completed?(current_user) == true %>
+        <h2>You Won! And You've Completed This Level!</h2>
+        <a class="btn btn-sand" href='/'>Let's Master The Next Level . . . </a>
+      <% end %>
     <% end %></p>
 <% else %>
 <%= incorrect_response.sample %>
