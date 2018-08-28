@@ -8,7 +8,12 @@
     </div>
   </div>
   <!-- <img src="<%= @image %>"> -->
-  <div class="collapse" id="collapseExample-<%= level.id %>">
+
+  <% if level.number == current_user.level.number %>
+    <div class="collapse in" id="collapseExample-<%= level.id %>">
+  <% else %>
+    <div class="collapse" id="collapseExample-<%= level.id %>">
+  <% end %>
     <div class="row">
       <div class="col-xs-6">
         <div class="level-details card-confetti-wrapper">
