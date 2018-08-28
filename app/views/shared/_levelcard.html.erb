@@ -1,4 +1,4 @@
-<div class="card level-border <%= "lock-design" if current_user.level.number < level.number %>">
+<div class="card level-border <%= "lock-design" if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>">
   <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>"  style="height: 100%;">
     <% img = "0" + level.number.to_s + ".jpg" %>
     <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
@@ -7,7 +7,7 @@
       <h4><%= level.name %></h4>
     </div>
     <!--<%# if current_user.level.number < level.number %> -->
-    <% if ( !current_user.nil? && level.number > current_user.level.number ) || (   current_user.nil? && level.number > 1 ) %>
+    <% if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>
       <i class="fas fa-lock fa-lock-pos"></i>
     <% else %>
       <i class="fas fa-unlock fa-lock-pos"></i>
