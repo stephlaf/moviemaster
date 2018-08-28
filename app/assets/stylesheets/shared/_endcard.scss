@@ -25,7 +25,11 @@
   margin-bottom: -45px;
 }
 
-.end-content h1 {
+.end-content-h1 {
+  color: $black;
   font-size: 120px;
-  text-shadow: 2px 3px 15px rgba(225, 225, 225, 0.3);
+  text-shadow: 2px 3px 15px rgba(235, 235, 235, 0.4);
+  &:hover {
+    color: $black;
+  }
 }
