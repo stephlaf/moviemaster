@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "levels/download_pdf"
   get 'answers/show'
   get 'responses/new'
   get 'responses/create'
