@@ -79,7 +79,7 @@ end
 
 def seed_wars
   puts "Creating Quiz and Answers for Star Wars"
-  starwars = Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: Faker::Lorem.paragraph,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
+  starwars = Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader." ,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
   question1 = Question.create(movie: starwars, content: "Tatooine corresponds to the:")
   Answer.create(question: question1, content: "call to  adventure")
   Answer.create(question: question1, content: "ordinary world", correct: true)
