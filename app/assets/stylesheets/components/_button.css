@@ -18,6 +18,16 @@
     background-color: $light-sand;
     color: $red;
   };
+  &:active {
+    background-color: transparent;
+    color: $red;
+  };
+  &:focus {
+    background-color: $light-sand;
+    color: $red;
+    outline: none;
+  };
+
 }
 /* Your button CSS code here */
 

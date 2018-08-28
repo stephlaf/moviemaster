@@ -13,21 +13,22 @@
   </div>
 
   <div class="level-content text-center">
-    
+
    <div class="lens-description">
      <h3>Lens description</h3>
-     <p>The Hero's Journey operates as a circular story structure, meaning that the hero's physical journey will end where it began, though their internal journey as a character will leave them forever changed.</p>
+     <p><%= @level.description.html_safe %></p>
+<!--      <p>The Hero's Journey operates as a circular story structure, meaning that the hero's physical journey will end where it began, though their internal journey as a character will leave them forever changed.</p>
 
     <p>This physical journey, in particular, will take your hero from a known world into an unknown one, often introducing them to new powers or skills or encouraging them to utilize known abilities like never before.</p>
 
     <p>With these two functions of The Hero's Journey in mind, it's easy to see how one of the core themes of any Hero's Journey story is transformation. Rarely do such stories feature a flat character arc, in which the protagonist fights to stay true to their beliefs rather than undergoing change as a result of new experiences.</p>
-     <br>
+ -->     <br>
 
     <div class="btn-center">
      <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#lensModal<%=  %>">
        Watch Lens
      </button>
-     <%= link_to 'Movie Notes', "#" ,class: "btn btn-danger btn-danger-reverse btn-sm" %>
+     <%= link_to 'Movie Notes', levels_download_pdf_path ,class: "btn btn-danger btn-danger-reverse btn-sm", target: '_blank' %>
     </div>
    </div>
 
@@ -85,9 +86,9 @@
               </div>
 
          </div>
-       </div> 
+       </div>
      <% end %>
-   </div>   
+   </div>
   </div>
 </div>
 
