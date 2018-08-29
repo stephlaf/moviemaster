@@ -1,6 +1,8 @@
 .quiz-container {
   width: 90%;
-  height: calc(100vh - 70px);
+  // height: 100vh;
+  height: calc(100vh - 120px);
+  margin-top: 70px;
 }
 .quiz-title-container {
   height: 15%;
