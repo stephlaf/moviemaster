@@ -30,13 +30,7 @@
       <div class="col-xs-6">
         <div class="level-details card-confetti-wrapper">
           <% if (@victory == true) && level == current_user.level %>
-            <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-                <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-                <% for i in 0...90  %>
+            <% for i in 0...75  %>
               <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
           <% end %>
@@ -49,13 +43,7 @@
       <div class="col-xs-6">
         <div class="level-images card-confetti-wrapper">
           <% if (@victory == true) && level == current_user.level %>
-            <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-                <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-                <% for i in 0...90  %>
+            <% for i in 0...75  %>
               <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
           <% end %>
@@ -71,12 +59,13 @@
     </div>
   </div>
 </div>
+<% @victory == true %>
 
 <% if @victory == true %>
   <script>
   var shimmerCard = document.querySelector(".card-shimmer")
   shimmerCard.classList.remove("display-none");
-  setTimeout(function() {shimmerCard.classList.add("display-none")}, 6000);
+  setTimeout(function() {shimmerCard.classList.add("display-none")}, 12000);
 
   </script>
 <% end %>

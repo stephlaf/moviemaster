@@ -7,8 +7,8 @@
   position: absolute;
 }
 
-@for $i from 0 to 90 {
-  $l: random(90);
+@for $i from 0 to 75 {
+  $l: random(75);
   .confetti-#{$i} {
     height: auto;
     width: 100px;
@@ -16,7 +16,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 10s unquote(random(60)+"s");
+    animation: rain-#{$i} 12s unquote(random(20)+"s");
     z-index: 10;
   }
 
@@ -32,4 +32,117 @@
   }
 }
 
+
+[class|="top-confetti"] {
+  position: absolute;
+}
+
+@for $i from 0 to 90 {
+  $l: random(90);
+  .top-confetti-#{$i} {
+    height: auto;
+    width: 100px;
+    opacity: 0;
+    top: -20%;
+    left: unquote($l + "%");
+    transform: rotate(0);
+    animation: rain-#{$i} 20s unquote(random(13)+"s");
+    z-index: 10;
+  }
+
+  @keyframes rain-#{$i} {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      top: 200%;
+      left: unquote($l + random(15) + "%");
+      transform: rotate(#{random()*900}deg);
+    }
+  }
+}
+
+.card-shimmer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  opacity: 0.5;
+  background-color: $white;
+}
+
+.shimmer {
+  font-family: "medio";
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  margin-bottom: 0;
+  color: rgba(255,255,255,0.1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    background-position: top right;
+    opacity: 0;
+  }
+}
 
