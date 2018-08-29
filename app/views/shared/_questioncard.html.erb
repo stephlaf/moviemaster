@@ -1,7 +1,7 @@
-<div class="answer-card" style="background-image: url(<%= image_path('quiz-card2.jpg')%>);">
+<div class="answer-card" style="background-image: linear-gradient(rgba(80, 80, 80, 0.4), rgba(80, 80, 80, 0.4)),  url(<%= image_path('quiz-card2.jpg')%>);">
 
   <div class="question-content">
-    <h2><%= question.content %></h2>
+    <h3><%= question.content %></h3>
     <% question.answers.each do |answer| %></h2>
       <li id="<%= answer.id %>"><%= link_to answer.content, answer_path(answer), remote: true %></li>
     <% end %>
