@@ -1,34 +1,31 @@
 <% correct_response = ["The Force will be with you. Always.", "Nice shot kid, don't get cocky", "Now the student has become the master", "I never doubted you for a second"]%>
 <% incorrect_response = ["These aren't the droids you're looking for", "We're doomed", "I've got a bad feeling about this", "Weesa gonna die!", "I suggest a new strategy, R2: let the Wookiee win.", "I feel a great disturbance in the Force", "If there's a bright center to the universe, you're on the planet that it's farthest from"]%>
 
-<div class="answer-card" style="background-image: linear-gradient(rgba(80, 80, 80, 0.4), rgba(80, 80, 80, 0.4)), url(<%= image_path('quiz-card2.jpg')%>)">
+<div class="answer-card" style="background-image: linear-gradient(rgba(80, 80, 80, 0.2), rgba(80, 80, 80, 0.2)), url(<%= image_path('quiz-card2.jpg')%>)">
 
   <div class="answer-form">
-    <h2><%= @question.content %></h2>
     
-    <% if @answer.correct? %>
+    <% if @answer.correct? && @answer.movie.level.completed?(current_user) == true %>
+      <h3 class="win-center">Right you are: quiz complete!</h3>
+      <h4 class="win-center">And you've mastered this level!</h4>
+      <a class="btn btn-light-sand btn-sm btn-margin-top center-block" href="/#level<%= answer.movie.level.number + 1 %>">On To The Next Level</a>
+
+    <% elsif @answer.correct? %>
+      <h3><%= @question.content %></h3>
       <p><li class="good-answer-green"><%= @answer.content %></li><p>
-      
+
       <% if @score < 100 %>
-        <!-- <br> -->
         <p class="quote-response">"<%= correct_response.sample %>"</p>
         <a class="btn btn-light-sand btn-sm btn-margin-top" href='/quizzes/<%= @movie.id %>'><i class="fas fa-check"></i> Got It! Next Scene</a>
 
       <% else %>
         <% if @answer.movie.level.completed?(current_user) == false %>
-          <!-- <br> -->
           <a class="btn btn-light-sand btn-sm btn-margin-top" href='/quizzes/<%= @movie.id %>'><i class="fas fa-check"></i> You Won! Let's Watch Another Movie</a>
         <% end %>
-       
-        <% if @answer.movie.level.completed?(current_user) == true %>
-          <h4>You won! And you've completed this level!</h4>
-          <!-- <br> -->
-          <a class="btn btn-light-sand btn-sm  btn-margin-top" href="/#level<%= answer.movie.level.number + 1 %>"><i class="fas fa-check"></i> Let's Master The Next Level</a>
-        <% end %>
-
       <% end %>
     
     <% else %>
+      <h3><%= @question.content %></h3>
       <li class="wrong-answer-red"><%= @answer.content %></li>
       <p class="quote-response"> "<%= incorrect_response.sample %>" </p>
       <a class="btn btn-light-sand btn-sm btn-margin-top" href='/quizzes/<%= @movie.id %>'><i class="fas fa-redo-alt"></i> Let's Do A Retake</a>
