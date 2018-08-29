@@ -40,12 +40,33 @@
       <% end %>
     </div>
     <div class="row" >
+      <% if !current_user.nil? %>
+        <% now_playing_level = current_user.level.number  %>
+      <% else %>
+        <% now_playing_level = 1 %>
+      <% end %>
+      <% if now_playing_level > 1 %>
+        <h2>Previously on Movie Master . . .</h2>
+      <% end %>
       <% @levels.each do |level| %>
-
+        <% if now_playing_level == level.number %>
+          <h2>Now Playing . . .</h2>
+        <% end %>
         <div class="col-xs-12" id="level<%= level.number %>">
           <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
         </div>
-
+        <% if now_playing_level == level.number %>
+          <h2>Coming Soon . . .</h2>
+        <% end %>
       <% end %>
     </div>
 </div>
+
+<% if @victory == true %>
+  <script>
+  var shimmerCard = document.querySelector(".card-shimmer")
+  shimmerCard.classList.remove("display-none");
+  setTimeout(function() {shimmerCard.classList.add("display-none")}, 12000);
+  </script>
+<% end %>
+
