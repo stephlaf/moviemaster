@@ -32,9 +32,12 @@ a {
   left: 75px;
   p {
   font-family: 'Open Sans';
-  // font-size: 24px;
-  color: $white;
+  // color: $white;
+  color: #babab6;
   }
+}
+.btn-margin-top {
+  margin-top: 10px;
 }
 .question-content {
   position: absolute;
@@ -42,20 +45,19 @@ a {
   left: 75px;
   h2 {
     font-family: medio;
-    // font-size: 30px;
   }
-}
-.wrong-answer-red {
-  color: $red;
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
-}
-.correct-response {
-  font-size: 22px;
 }
 .good-answer-green {
   color: $green;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
 }
-.btn-center {
-  
+.wrong-answer-red {
+  color: $red;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
 }
+.quote-response {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+}
+
