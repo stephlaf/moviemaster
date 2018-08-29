@@ -16,7 +16,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 12s unquote(random(20)+"s");
+    animation: rain-#{$i} 10s unquote(random(7)+"s");
     z-index: 10;
   }
 
@@ -46,7 +46,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 20s unquote(random(13)+"s");
+    animation: rain-#{$i} 10s unquote(random(6)+"s");
     z-index: 10;
   }
 
