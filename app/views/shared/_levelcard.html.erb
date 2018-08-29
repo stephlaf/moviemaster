@@ -1,4 +1,4 @@
-<div class="card level-border">
+<div class="card level-border <%= "lock-design" if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>">
   <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>"  style="height: 100%;">
     <% img = "0" + level.number.to_s + ".jpg" %>
     <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
@@ -6,10 +6,16 @@
     <div class="level_content">
       <h4><%= level.name %></h4>
     </div>
+    <!--<%# if current_user.level.number < level.number %> -->
+    <% if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>
+      <i class="fas fa-lock fa-lock-pos"></i>
+    <% else %>
+      <i class="fas fa-unlock fa-lock-pos"></i>
+    <% end %>
   </div>
   <!-- <img src="<%= @image %>"> -->
 
-  <% if level.number == current_user.level.number %>
+  <% if !current_user.nil? && level.number == current_user.level.number %>
     <div class="collapse in" id="collapseExample-<%= level.id %>">
   <% else %>
     <div class="collapse" id="collapseExample-<%= level.id %>">
@@ -19,13 +25,13 @@
         <div class="level-details card-confetti-wrapper">
           <% if (@victory == true) && level == current_user.level %>
             <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
                 <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
                 <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
           <% end %>
 
@@ -38,13 +44,13 @@
         <div class="level-images card-confetti-wrapper">
           <% if (@victory == true) && level == current_user.level %>
             <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
                 <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
                 <% for i in 0...90  %>
-              <%= image_tag "confetti-#{i % 3}", class: "confetti-#{i}" %>
+              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
             <% end %>
           <% end %>
           <% level.movies.each do |movie| %>
