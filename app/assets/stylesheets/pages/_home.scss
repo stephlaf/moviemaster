@@ -153,10 +153,11 @@ h4 {
 }
 
 .lock-design{
-  background: #e0d4d4;
-
+  filter: blur(2px);
   color: #aaa6a6;
   .card-image{
     opacity: 0.7;
   }
 }
+
+
