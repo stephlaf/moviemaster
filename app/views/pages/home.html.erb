@@ -48,18 +48,21 @@
       <% else %>
         <% now_playing_level = 1 %>
       <% end %>
-      <% if now_playing_level > 1 %>
-        <h2>Previously on Movie Master . . .</h2>
-      <% end %>
       <% @levels.first(display_number).each do |level| %>
+        <% if now_playing_level > level.number && level.number == 1 %>
+          <h3>Previously on Movie Master!</h3>
+        <% end %>
+        <% if now_playing_level > level.number && level.number > 1 %>
+          <h3>Also on Movie Master!</h3>
+        <% end %>
         <% if now_playing_level == level.number %>
-          <h2>Now Playing . . .</h2>
+          <h3>Now Playing . . .</h3>
         <% end %>
         <div class="col-xs-12" id="level<%= level.number %>">
           <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
         </div>
         <% if now_playing_level == level.number %>
-          <h2>Coming Soon . . .</h2>
+          <h3>Coming Soon . . .</h3>
         <% end %>
       <% end %>
     </div>
