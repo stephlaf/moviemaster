@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:render_404, :render_500]
 
   if Rails.env == "production"
     rescue_from ActiveRecord::RecordNotFound, with: :on_record_not_found
@@ -17,12 +17,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def on_internal_server_error
+  def render_500
     if params[:format].present? && params[:format] != 'html'
       head status: 500
     else
       render 'errors/500', status: 500, layout: "errors"
     end
+  end
+
+  def on_internal_server_error
+    render_500
   end
 
   def on_record_not_found
