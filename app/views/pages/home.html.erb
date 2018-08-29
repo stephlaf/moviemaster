@@ -41,15 +41,17 @@
       <% end %>
     </div>
     <div class="row" >
+      <% display_number = 3 %>
       <% if !current_user.nil? %>
         <% now_playing_level = current_user.level.number  %>
+        <% display_number = now_playing_level + 1 if now_playing_level > 2 %>
       <% else %>
         <% now_playing_level = 1 %>
       <% end %>
       <% if now_playing_level > 1 %>
         <h2>Previously on Movie Master . . .</h2>
       <% end %>
-      <% @levels.each do |level| %>
+      <% @levels.first(display_number).each do |level| %>
         <% if now_playing_level == level.number %>
           <h2>Now Playing . . .</h2>
         <% end %>
