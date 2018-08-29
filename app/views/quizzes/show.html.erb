@@ -8,7 +8,7 @@
     </div>
   </div>
   <!-- <br> -->
-  <div id="quizcard" style="margin-top: 0px;">
+  <div id="quizcard" style="margin-top: 30px;">
         <% if @score < 100 %>
       <%= render partial: "shared/questioncard", locals: {question: @remaining_questions.first}  %>
     <% else %>

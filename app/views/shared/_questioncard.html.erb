@@ -1,6 +1,6 @@
 <div class="answer-card" style="background-image: url(<%= image_path('quiz-card2.jpg')%>);">
 
-  <div>
+  <div class="question-content">
     <h2><%= question.content %></h2>
     <% question.answers.each do |answer| %></h2>
       <li id="<%= answer.id %>"><%= link_to answer.content, answer_path(answer), remote: true %></li>
