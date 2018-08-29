@@ -11,7 +11,7 @@
       <% end %>
       <% if @movie.level.completed?(current_user) == true %>
         <p>And You've Completed This Level!</p>
-        <a class="btn btn-sand" href='/'>Let's Master The Next Level . . . </a>
+        <a class="btn btn-sand" href="/#level<%= movie.level.number + 1 %>">Let's Master The Next Level . . . </a>
       <% end %>
 
 </div>

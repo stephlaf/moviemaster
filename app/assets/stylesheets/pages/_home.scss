@@ -143,3 +143,20 @@ h4 {
   align-items: center;
   margin: 45px;
 }
+
+.fa-lock-pos{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333356;
+  font-size: 20px;
+}
+
+.lock-design{
+  background: #e0d4d4;
+
+  color: #aaa6a6;
+  .card-image{
+    opacity: 0.7;
+  }
+}
