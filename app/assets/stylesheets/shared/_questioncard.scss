@@ -1,16 +1,15 @@
 li {
   font-family: 'Open Sans';
-  // font-size: 20px;
   font-size: 20px;
-  // margin: 2px 0;
-  // font-weight: bold;
   color: $white;
+  opacity: 0.9;
 }
 a {
   color: $white;
   text-decoration: none;
   &:hover {
-  color: $sand;
+  color: $timberwolf;
+  // color: $sand;
   text-decoration: none;
   }
 }
@@ -25,26 +24,28 @@ a {
   background-size: cover;
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .answer-form {
-  position: absolute;
-  top: 113px;
-  left: 75px;
+  margin-top: -35px;
   p {
   font-family: 'Open Sans';
-  // color: $white;
   color: #babab6;
   margin-top:12.5px;
+  }
+  h4 {
+    font-size: 24px;
+    margin-bottom: 25px;
   }
 }
 .btn-margin-top {
   margin-top: 10px;
+  max-width: 190px;
 }
 .question-content {
-  position: absolute;
-  top: 113px;
-  left: 75px;
+  margin-top: -60px;
   h3 {
     font-family: medio;
   }
@@ -64,5 +65,8 @@ a {
 }
 a > i {
   padding-right: 13px;
+}
+.win-center {
+  text-align: center;
 }
 
