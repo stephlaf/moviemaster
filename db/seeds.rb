@@ -137,7 +137,7 @@ def seed_wars
   question10 = Question.create(movie: starwars, content: "The resurrection stage of the hero's journey occurs when:")
   Answer.create(question: question10, content: "Darth Vader reveals that he is Luke's father")
   Answer.create(question: question10, content: "Luke channels Obi-Wan and the force to destroy the death star", correct: true)
-  Answer.create(question: question10, content: "Luke receives a medal fro Princess Leia")
+  Answer.create(question: question10, content: "Luke receives a medal from Princess Leia")
   Answer.create(question: question10, content: "Han Solo returns to help Luke fight the Death Star")
 end
 

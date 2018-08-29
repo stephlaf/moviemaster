@@ -14,6 +14,12 @@ class Level < ApplicationRecord
     return @response
   end
 
+  def next
+    number = self.number
+    num = number + 1
+    @next = Level.find_by(number: num)
+  end
+
 
   def score(user)
     @score = 0

@@ -22,7 +22,10 @@
      <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#lensModal<%=  %>">
        Watch Lens
      </button>
-     <%= link_to 'Movie Notes', levels_download_pdf_path ,class: "btn btn-danger btn-danger-reverse btn-sm", target: '_blank' %>
+     <%= link_to 'Movie Notes', levels_download_pdf_path, class: "btn btn-danger btn-danger-reverse btn-sm", target: '_blank' %>
+     <% if @level.completed?(current_user) == true %>
+      <%= link_to 'Next Level', "/levels/#{@level.next.id}", class: "btn btn-danger btn-sm" %>
+     <% end %>
     </div>
    </div>
 
