@@ -9,7 +9,7 @@
     <!--<%# if current_user.level.number < level.number %> -->
     <% if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>
       <i class="fas fa-lock fa-lock-pos"></i>
-    <% else %>
+    <% elsif (@victory == true) && level == current_user.level %>
       <i class="fas fa-unlock fa-lock-pos"></i>
     <% end %>
   </div>
@@ -54,7 +54,11 @@
             <% end %>
           <% end %>
           <% level.movies.each do |movie| %>
-          <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
+            <% if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>
+              <%= image_tag movie.poster, class: "movie-poster" %>
+            <% else %>
+              <a href="/levels/<%= level.id %>"><%= image_tag movie.poster, class: "movie-poster" %></a>
+            <% end %>
           <% end %>
         </div>
       </div>
