@@ -152,9 +152,14 @@ h4 {
   font-size: 20px;
 }
 
-.lock-design{
-  background: #e0d4d4;
+.unlock-icon {
+  top: 80px;
+  right: 60px;
+  z-index: 2;
+}
 
+.lock-design{
+  filter: blur(2px);
   color: #aaa6a6;
   .card-image{
     opacity: 0.7;
@@ -164,3 +169,4 @@ h4 {
 .display-none {
   display: none;
 }
+
