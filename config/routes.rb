@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :answers, only: [:show]
   resources :levels
   get 'end', to: 'pages#end'
+
+  get '*unmatched_route', :to => 'application#render_404'
 end
+
