@@ -1,18 +1,23 @@
-<div class="answer-card" style="background-image:linear-gradient(rgba(80, 80, 80, 0.2), rgba(80, 80, 80, 0.2)),  url(<%= image_path('quiz-card2.jpg')%>)">
 
-<div class="answer-form">
+<div class="answer-card" >
+  
+  <%= image_tag('quiz-card2-top', class: 'card-top') %>
 
-<h3>Hooray!</h3>
+  <div class="answer-form">
 
-<p>You have completed this movie!</p>
+    <h3>Hooray!</h3>
 
-      <% if @movie.level.completed?(current_user) == false %>
-<a class="btn btn-sand" href='/levels/<%= movie.level.id %>'>Let's Watch The Next Movie!</a>
-      <% end %>
-      <% if @movie.level.completed?(current_user) == true %>
-        <p>And You've Completed This Level!</p>
-        <a class="btn btn-sand" href="/#level<%= movie.level.number + 1 %>">Let's Master The Next Level . . . </a>
-      <% end %>
+    <p>You have completed this movie!</p>
 
-</div>
+    <% if @movie.level.completed?(current_user) == false %>
+      <a class="btn btn-sand" href='/levels/<%= movie.level.id %>'>Let's Watch The Next Movie!</a>
+    <% end %>
+
+    <% if @movie.level.completed?(current_user) == true %>
+      <p>And You've Completed This Level!</p>
+      <a class="btn btn-sand" href="/#level<%= movie.level.number + 1 %>">Let's Master The Next Level . . . </a>
+    <% end %>
+
+  </div>
+  <%= image_tag('quiz-card2-bot', class: 'card-bot') %>
 </div>

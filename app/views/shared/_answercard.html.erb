@@ -1,8 +1,8 @@
 <% correct_response = ["The Force will be with you. Always.", "Nice shot kid, don't get cocky", "Now the student has become the master", "I never doubted you for a second"]%>
 <% incorrect_response = ["These aren't the droids you're looking for", "We're doomed", "I've got a bad feeling about this", "Weesa gonna die!", "I suggest a new strategy, R2: let the Wookiee win.", "I feel a great disturbance in the Force", "If there's a bright center to the universe, you're on the planet that it's farthest from"]%>
 
-<div class="answer-card" style="background-image: linear-gradient(rgba(80, 80, 80, 0.2), rgba(80, 80, 80, 0.2)), url(<%= image_path('quiz-card2.jpg')%>)">
-
+<div class="answer-card" >
+  <%= image_tag('quiz-card2-top', class: 'card-top-answer') %>
   <div class="answer-form">
     
     <% if @answer.correct? && @answer.movie.level.completed?(current_user) == true %>
@@ -32,4 +32,5 @@
     <% end %>
     <br>
   </div>
+  <%= image_tag('quiz-card2-bot', class: 'card-bot') %>
 </div>
