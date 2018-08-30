@@ -19,20 +19,11 @@
 </div>
 
 <div class="container container-overflow-hide" id="begin">
-  <% @victory = false %>
+  <% @victory = true %>
   <% @victory = true if !current_user.nil? && current_user.level_up? %>
     <div class="card-confetti-wrapper">
       <% if @victory == true %>
-        <% for i in 0...90  %>
-          <%= image_tag "confetti-#{i % 11}", class: "top-confetti-#{i}" %>
-        <% end %>
-        <% for i in 0...90  %>
-          <%= image_tag "confetti-#{i % 11}", class: "top-confetti-#{i}" %>
-        <% end %>
-        <% for i in 0...90  %>
-          <%= image_tag "confetti-#{i % 11}", class: "top-confetti-#{i}" %>
-        <% end %>
-        <% for i in 0...90  %>
+        <% for i in 0...50  %>
           <%= image_tag "confetti-#{i % 11}", class: "top-confetti-#{i}" %>
         <% end %>
       <% end %>
