@@ -1,5 +1,4 @@
 #myVideo {
-  // position: fixed;
   right: 0px;
   top: 70px;
   bottom: 0px;
@@ -11,44 +10,37 @@
 }
 /* Add some content at the bottom of the video/page */
 .content {
-    position: absolute;
-    bottom: 100px;
-    left: 40px;
-    background: rgba(0, 0, 0, 0);
-    color: #f1f1f1;
-    padding: 10px;
-    margin-left: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 40px;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  padding: 10px;
+  margin-left: 40px;
 }
-
 .card-image {
   height: 100px;
 }
-
 .level_content {
   padding-top: 16px;
   justify-content: center;
 }
-
 .row h3 {
   font-family: "bettynoir";
   margin-bottom: auto;
   margin-left: 45px;
 }
-
 h1 {
   margin: 20px 0;
   font-family: "bettynoir";
 }
-
 h3 {
   font-family: "medio";
 }
-
 p {
   color: rgba(110, 110, 110, 1);
   font-family: "medio";
 }
-
 h4 {
   display: flex;
   align-content: center;
@@ -63,7 +55,6 @@ h4 {
 }
 
 .home_banner {
-  // margin-top: 70px;
   position: relative;
   height: calc(100vh - 70px);
   overflow: hidden;
@@ -76,8 +67,6 @@ h4 {
     display: block;
   }
 }
-
-
 .card {
   min-height: 80px;
   position: relative;
@@ -86,7 +75,6 @@ h4 {
   margin-top: 70px;
   background-color: $sepia;
 }
-
 .card-image {
   width: 120px;
   height: 120px;
@@ -141,7 +129,7 @@ h4 {
 
 .movie-poster {
   height: 200px;
-  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
+  box-shadow: $box-shadow;
 }
 .level-images {
   display: flex;
