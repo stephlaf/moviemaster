@@ -16,16 +16,30 @@ a {
 #score, h2 {
   font-family: 'medio'
 }
+// .answer-card {
+//   width: 100%;
+//   height: 100%;
+//   color: white;
+//   background-position: center;
+//   background-size: cover;
+//   border-radius: 5px;
+//   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 .answer-card {
   width: 100%;
   height: 100%;
   color: white;
-  background-position: center;
-  background-size: cover;
+  background: $black;
+  // background-position: center;
+  // background-size: cover;
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 .answer-form {
@@ -45,7 +59,7 @@ a {
   max-width: 190px;
 }
 .question-content {
-  margin-top: -60px;
+  margin-top: -35px;
   h3 {
     font-family: medio;
   }
@@ -69,4 +83,14 @@ a > i {
 .win-center {
   text-align: center;
 }
-
+.card-top {
+  margin-top: 10px;
+  // margin-bottom: 29px;
+}
+.card-top-answer {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.card-bot {
+  margin-bottom: 10px;
+}

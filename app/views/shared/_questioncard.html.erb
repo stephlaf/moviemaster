@@ -1,10 +1,12 @@
-<div class="answer-card" style="background-image: linear-gradient(rgba(80, 80, 80, 0.2), rgba(80, 80, 80, 0.2)),  url(<%= image_path('quiz-card2.jpg')%>);">
+<div class="answer-card" >
+  <%= image_tag('quiz-card2-top', class: 'card-top') %>
 
-  <div class="question-content">
-    <h3><%= question.content %></h3>
-    <% question.answers.each do |answer| %></h2>
-      <li id="<%= answer.id %>"><%= link_to answer.content, answer_path(answer), remote: true %></li>
-    <% end %>
-  </div>
+    <div class="question-content">
+      <h3><%= question.content %></h3>
+      <% question.answers.each do |answer| %></h2>
+        <li id="<%= answer.id %>"><%= link_to answer.content, answer_path(answer), remote: true %></li>
+      <% end %>
+    </div>
+  <%= image_tag('quiz-card2-bot', class: 'card-bot') %>
 </div>
 
