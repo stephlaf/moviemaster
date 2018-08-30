@@ -7,8 +7,8 @@
   position: absolute;
 }
 
-@for $i from 0 to 75 {
-  $l: random(75);
+@for $i from 0 to 45 {
+  $l: random(45);
   .confetti-#{$i} {
     height: auto;
     width: 100px;
@@ -16,7 +16,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 10s unquote(random(7)+"s");
+    animation: rain-#{$i} 8s unquote(random(3)+"s");
     z-index: 10;
   }
 
@@ -46,7 +46,7 @@
     top: -20%;
     left: unquote($l + "%");
     transform: rotate(0);
-    animation: rain-#{$i} 10s unquote(random(6)+"s");
+    animation: rain-#{$i} 9s unquote(random(3)+"s");
     z-index: 10;
   }
 
