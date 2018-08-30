@@ -31,24 +31,13 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="level-details card-confetti-wrapper">
-          <% if  !current_user.nil? && @victory == true && level == current_user.level %>
-            <% for i in 0...45  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-          <% end %>
-
-          <h4>Level Details</h4>
+           <h4>Level Details</h4>
           <p> <%= Lens.find_by(id: level.id).description.split("<p>")[0] %></p>
         </div>
       </div>
 
       <div class="col-xs-6">
         <div class="level-images card-confetti-wrapper">
-          <% if  !current_user.nil? && @victory == true && level == current_user.level %>
-            <% for i in 0...45  %>
-              <%= image_tag "confetti-#{i % 11}", class: "confetti-#{i}" %>
-            <% end %>
-          <% end %>
           <% level.movies.each do |movie| %>
             <% if ( !current_user.nil? && level.number > current_user.level.number ) || ( current_user.nil? && level.number > 1 ) %>
               <%= image_tag movie.poster, class: "movie-poster" %>
