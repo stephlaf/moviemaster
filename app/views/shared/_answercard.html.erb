@@ -6,7 +6,7 @@
   <div class="answer-form">
     
     <% if @answer.correct? && @answer.movie.level.completed?(current_user) == true %>
-      <h3 class="win-center">Right you are: quiz complete!</h3>
+      <h3 class="win-center">Right you are. Quiz complete!</h3>
       <h4 class="win-center">And you've mastered this level!</h4>
       <a class="btn btn-light-sand btn-sm btn-margin-top center-block" href="/#level<%= answer.movie.level.number + 1 %>">On To The Next Level</a>
 
