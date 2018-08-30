@@ -18,12 +18,11 @@
   position: relative;
   margin-bottom: 24px;
   border-radius: 4px;
-  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.4);
+  box-shadow: $box-shadow;
 
 }
 #bar {
   height: 24px;
-  // height: 24px;
   background-color: $red;
   border-radius: 4px;
 }
@@ -45,13 +44,8 @@
 }
 .star {
   position: absolute;
-  // background-color: $white;
   height: 53px;
-  // height: 70px;
   width: 58px;
-  // width: 75px;
   right: -28px;
-  // right: -35px;
   top: -21px;
-  // top: -22px;
 }

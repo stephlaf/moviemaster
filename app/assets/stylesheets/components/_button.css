@@ -39,17 +39,14 @@
   color: white;
   padding: 10px 15px;
   border-radius: 6px;
-  /*font-weight: bold;*/
   text-decoration: none;
   transition: all 0.2s ease;
   &:hover {
     background: $light-red;
-    /*border: 1px solid $red;*/
     text-decoration: none;
     color: $white;
   }
 }
-
 
 .btn-prune {
   color: white;
@@ -86,9 +83,6 @@
   }
 }
 
-
-
-
 .btn-sand {
   color: white;
   padding: 15px 25px;
@@ -97,7 +91,6 @@
   text-decoration: none;
   background: $sand;
   transition: background 0.9s ease;
-
 }
 .btn-sand:hover {
   opacity: 1;
@@ -106,7 +99,6 @@
   text-decoration: none;
   color: $sand;
 }
-
 
 .btn-teal {
   color: white;
