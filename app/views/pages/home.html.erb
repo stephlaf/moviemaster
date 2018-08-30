@@ -49,20 +49,11 @@
         <% now_playing_level = 1 %>
       <% end %>
       <% @levels.first(display_number).each do |level| %>
-        <% if now_playing_level > level.number && level.number == 1 %>
-          <h3>Previously on Movie Master!</h3>
-        <% end %>
-        <% if now_playing_level > level.number && level.number > 1 %>
-          <h3>Also on Movie Master!</h3>
-        <% end %>
-        <% if now_playing_level == level.number %>
-          <h3>Now Playing . . .</h3>
-        <% end %>
         <div class="col-xs-12" id="level<%= level.number %>">
           <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
         </div>
-        <% if now_playing_level == level.number %>
-          <h3>Coming Soon . . .</h3>
+        <% if !current_user.nil? && now_playing_level == level.number %>
+          <h3 style = "text-align: center;">Coming Soon . . .</h3>
         <% end %>
       <% end %>
     </div>
