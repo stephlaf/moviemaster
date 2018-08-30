@@ -105,10 +105,11 @@ def seed_wars
   Answer.create(question: question4, content: "R2-D2")
 
   question5 = Question.create(movie: starwars, content: "During the Ordeal stage of the hero's journey:")
-  Answer.create(question: question8, content: "A thug in the cantina picks a fight with Luke")
-  Answer.create(question: question8, content: "Luke's aunt and uncle are killed")
-  Answer.create(question: question8, content: "Obi-Wan sacrifices himself to save Luke", correct: true)
-  Answer.create(question: question8, content: "Princess Leia is killed")
+  Answer.create(question: question5, content: "A thug in the cantina picks a fight with Luke")
+  Answer.create(question: question5, content: "Luke's aunt and uncle are killed")
+  Answer.create(question: question5, content: "Obi-Wan sacrifices himself to save Luke", correct: true)
+  Answer.create(question: question5, content: "Princess Leia is killed")
+
 
   question6 = Question.create(movie: starwars, content: "Luke's allies are:")
   Answer.create(question: question6, content: "The sand people")
@@ -123,10 +124,10 @@ def seed_wars
   Answer.create(question: question7, content: "Mos Eisley")
 
   question8 = Question.create(movie: starwars, content: "The threshold stage of the hero's journey is represented by:")
-  Answer.create(question: question5, content: "Luke's aunt and uncle's farm")
-  Answer.create(question: question5, content: "The dessert of Tatooine")
-  Answer.create(question: question5, content: "The Milennium Falcon")
-  Answer.create(question: question5, content: "The Mos Eisley spaceport", correct: true)
+  Answer.create(question: question8, content: "Luke's aunt and uncle's farm")
+  Answer.create(question: question8, content: "The dessert of Tatooine")
+  Answer.create(question: question8, content: "The Milennium Falcon")
+  Answer.create(question: question8, content: "The Mos Eisley spaceport", correct: true)
 
   question9 = Question.create(movie: starwars, content: "The hero's reward for saving Princess Leia is:")
   Answer.create(question: question9, content: "He receives a cake")
