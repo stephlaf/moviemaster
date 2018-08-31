@@ -80,11 +80,12 @@ end
 def seed_wars
   puts "Creating Quiz and Answers for Star Wars"
   starwars = Movie.create(level: Level.second, video: "https://www.youtube.com/watch?v=l_n-Cw_whls", description: "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the evil Darth Vader." ,title: "Star Wars", IMDB: "tt0076759", poster: "star_wars.jpg", movie_guide: "foo.pdf")
-  question1 = Question.create(movie: starwars, content: "Tatooine corresponds to the:")
-  Answer.create(question: question1, content: "Call to  adventure")
-  Answer.create(question: question1, content: "Ordinary world", correct: true)
-  Answer.create(question: question1, content: "Special world")
-  Answer.create(question: question1, content: "Refusal of the call")
+
+  question1 = Question.create(movie: starwars, content: "The resurrection stage of the hero's journey occurs when:")
+  Answer.create(question: question1, content: "Darth Vader reveals that he is Luke's father")
+  Answer.create(question: question1, content: "Luke channels Obi-Wan and the force to destroy the Death Star", correct: true)
+  Answer.create(question: question1, content: "Luke receives a medal from Princess Leia")
+  Answer.create(question: question1, content: "Han Solo returns to help Luke fight the Death Star")
 
   question2 = Question.create(movie: starwars, content: "Luke receives his call to adventure:")
   Answer.create(question: question2, content: "When Ob-Wan Kenobi reveals himself to be a Jedi knight")
@@ -98,18 +99,17 @@ def seed_wars
   Answer.create(question: question3, content: "He is afraid of spaceships")
   Answer.create(question: question3, content: "He feels an obligation to his aunt and uncle", correct: true)
 
-  question4 = Question.create(movie: starwars, content: "Who is Luke's mentor?")
-  Answer.create(question: question4, content: "Obi-Wan Kenobi", correct: true)
-  Answer.create(question: question4, content: "Han Solo")
-  Answer.create(question: question4, content: "Princess Leia")
-  Answer.create(question: question4, content: "R2-D2")
+  question4 = Question.create(movie: starwars, content: "The threshold stage of the hero's journey is represented by:")
+  Answer.create(question: question4, content: "Luke's aunt and uncle's farm")
+  Answer.create(question: question4, content: "The dessert of Tatooine")
+  Answer.create(question: question4, content: "The Milennium Falcon")
+  Answer.create(question: question4, content: "The Mos Eisley spaceport", correct: true)
 
   question5 = Question.create(movie: starwars, content: "During the Ordeal stage of the hero's journey:")
   Answer.create(question: question5, content: "A thug in the cantina picks a fight with Luke")
   Answer.create(question: question5, content: "Luke's aunt and uncle are killed")
   Answer.create(question: question5, content: "Obi-Wan sacrifices himself to save Luke", correct: true)
   Answer.create(question: question5, content: "Princess Leia is killed")
-
 
   question6 = Question.create(movie: starwars, content: "Luke's allies are:")
   Answer.create(question: question6, content: "The sand people")
@@ -123,23 +123,23 @@ def seed_wars
   Answer.create(question: question7, content: "Alderaan")
   Answer.create(question: question7, content: "Mos Eisley")
 
-  question8 = Question.create(movie: starwars, content: "The threshold stage of the hero's journey is represented by:")
-  Answer.create(question: question8, content: "Luke's aunt and uncle's farm")
-  Answer.create(question: question8, content: "The dessert of Tatooine")
-  Answer.create(question: question8, content: "The Milennium Falcon")
-  Answer.create(question: question8, content: "The Mos Eisley spaceport", correct: true)
+  question8 = Question.create(movie: starwars, content: "Tatooine corresponds to the:")
+  Answer.create(question: question8, content: "Call to  adventure")
+  Answer.create(question: question8, content: "Ordinary world", correct: true)
+  Answer.create(question: question8, content: "Special world")
+  Answer.create(question: question8, content: "Refusal of the call")
 
-  question9 = Question.create(movie: starwars, content: "The hero's reward for saving Princess Leia is:")
-  Answer.create(question: question9, content: "He receives a cake")
-  Answer.create(question: question9, content: "He becomes a pilot in the rebel fleet", correct: true)
-  Answer.create(question: question9, content: "He becomes commander of the Death Star")
-  Answer.create(question: question9, content: "He receives his father's light saber")
+  question9 = Question.create(movie: starwars, content: "Who is Luke's mentor?")
+  Answer.create(question: question9, content: "Obi-Wan Kenobi", correct: true)
+  Answer.create(question: question9, content: "Han Solo")
+  Answer.create(question: question9, content: "Princess Leia")
+  Answer.create(question: question9, content: "R2-D2")
 
-  question10 = Question.create(movie: starwars, content: "The resurrection stage of the hero's journey occurs when:")
-  Answer.create(question: question10, content: "Darth Vader reveals that he is Luke's father")
-  Answer.create(question: question10, content: "Luke channels Obi-Wan and the force to destroy the Death Star", correct: true)
-  Answer.create(question: question10, content: "Luke receives a medal from Princess Leia")
-  Answer.create(question: question10, content: "Han Solo returns to help Luke fight the Death Star")
+  question10 = Question.create(movie: starwars, content: "The hero's reward for saving Princess Leia is:")
+  Answer.create(question: question10, content: "He receives a cake")
+  Answer.create(question: question10, content: "He becomes a pilot in the rebel fleet", correct: true)
+  Answer.create(question: question10, content: "He becomes commander of the Death Star")
+  Answer.create(question: question10, content: "He receives his father's light saber")
 end
 
 def seed_responses
@@ -151,7 +151,7 @@ def seed_responses
       Response.create(user: User.first, answer: question.answers.fourth)
     end
   end
-  puts "Seeding Correct Quiz Resposes for First Seven Star Wars Questions"
+  puts "Seeding Correct Quiz Responses for First Seven Star Wars Questions"
   Movie.last.questions.first(7).each do |question|
     Response.create(user: User.first, answer: question.answers.where(correct: true)[0])
   end
