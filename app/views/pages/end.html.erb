@@ -8,4 +8,10 @@
   </div>
 </div>
 
+<% if !current_user.nil? && current_user.level.number > 2 %>
+  <% 3.times { current_user.responses.last.destroy } %>
+  <% current_user.level = Level.second %>
+  <% current_user.save %>
+<% end %>
+
 <script>document.getElementById("myendVideo").playbackRate = 0.35;</script>
