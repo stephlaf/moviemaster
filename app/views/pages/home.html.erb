@@ -23,7 +23,7 @@
   <% @victory = true if !current_user.nil? && current_user.level_up? %>
     <div class="card-confetti-wrapper">
       <% if @victory == true %>
-        <% for i in 0...35  %>
+        <% for i in 0...25  %>
           <%= image_tag "confetti-#{i % 11}", class: "top-confetti-#{i}" %>
         <% end %>
       <% end %>
