@@ -35,7 +35,7 @@
           <%= render partial: "shared/levelcard", locals: {level: level, victory: @victory}  %>
         </div>
         <% if !current_user.nil? && now_playing_level == level.number %>
-          <h3 style = "text-align: center;">Coming Soon . . .</h3>
+          <h3 style = "text-align: center;">Coming Soon...</h3>
         <% end %>
       <% end %>
     </div>
