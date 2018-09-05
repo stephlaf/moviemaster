@@ -6,7 +6,7 @@
   <div data-toggle="collapse" data-target="#collapseExample-<%= level.id %>"  style="height: 100%;">
     <% img = "0" + level.number.to_s + ".jpg" %>
       <% if !current_user.nil? && level.number == current_user.level.number %>
-        <div class="card-shimmer display-none"><h4 class="shimmer">level unlocked!</h4></div>
+        <div class="card-shimmer display-none"><h4 class="shimmer">Level Unlocked!</h4></div>
       <% end %>
     <div class="card-image" style="background-image: url('<%= asset_path(img) %>');"></div>
 
