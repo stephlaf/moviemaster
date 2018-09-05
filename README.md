@@ -1,4 +1,6 @@
-This is a personal version of our team's (of 4) final projetct as part of Le Wagon Montreal's 9 weeks bootcamp.
+Movie Master
+
+This is a personal version of our team's (of 4) final projetct as part of [Le Wagon](https://www.lewagon.com) Montreal's 9 weeks bootcamp.
 
 The challenge was to bring the project from idea to demo, as an MVP version, in 2 weeks. 
 
@@ -6,8 +8,8 @@ For the purposes of the demo, not all the functionalities have been implemented,
 
 If you wish to login:
 
-steven@spielberg.com
-123456
+User: steven@spielberg.com
+Password: 123456
 
 will get you in!
 
